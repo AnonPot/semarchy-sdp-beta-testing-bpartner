@@ -1,0 +1,35 @@
+# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
+
+name: Semarchy SDP Deployer
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    env:
+      INSTANCE_URL: "https://apgar.na.semarchy.net"
+      DM_API_KEY: "t2Qxw44.YL59d2ayuL0z1znWMk2Yt9JkOxMXtwvwkY8"
+      DATA_SOURCE: "datasource1"
+      DATA_LOCATION: "BusinessPartner"
+
+    strategy:
+      matrix:
+        node-version: [18.x, 20.x, 22.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Build and Deploy Using Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+    - run: echo "line1" #npm install -g .ci/packages/semarchy-sem-design-*.tgz # tgz sem-design package need to be near the CICD file (here in .ci/packages/ folder)
+    - run: echo "line1" #sem-design dm data-location deploy --data-source $DATA_SOURCE --data-location $DATA_LOCATION --instance-url ${INSTANCE_URL}/dm --api-key $DM_API_KEY --root-folder ./${DATA_LOCATION} # sem-design command to build and deploy your model related to your variables
+    - run: echo "Done"
