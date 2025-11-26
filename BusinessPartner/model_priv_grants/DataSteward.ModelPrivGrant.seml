@@ -1,0 +1,36 @@
+_package: model_priv_grants
+_name: DataSteward
+_type: ModelPrivGrant
+roleName: DataSteward
+label: Data Steward
+dataAdminRole: false
+allowApiPublishingAsUser: false
+allowDataQualityDocumentation: false
+allowEnrichmentDocumentation: false
+description: "Data Steward role with access to specific entities and actions."
+# entityPrivGrants:
+#   - _type: EntityPrivGrant
+#     entity: entities.Address.Address
+#     _name: AddressEntityPrivGrant
+#     checkoutAllowed: true
+#     createAllowed: true
+#     deleteAllowed: true
+#     exportAllowed: true
+#     removeAllowed: true
+#   - _type: EntityPrivGrant
+#     entity: entities.Status.Status
+#     _name: StatusEntityPrivGrant
+#     checkoutAllowed: true
+#     createAllowed: true
+#     deleteAllowed: true
+#     exportAllowed: true
+#     removeAllowed: true
+#   - _type: EntityPrivGrant
+#     entity: entities.BusinessPartner.BusinessPartner
+#     _name: BusinessPartnerEntityPrivGrant
+#     checkoutAllowed: true
+#     createAllowed: true
+#     deleteAllowed: true
+#     exportAllowed: true
+#     removeAllowed: true
+  

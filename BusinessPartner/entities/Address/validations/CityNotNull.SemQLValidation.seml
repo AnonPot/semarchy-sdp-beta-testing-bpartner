@@ -1,0 +1,8 @@
+_package: entities.Address.validations
+_name: CityNotNull
+_type: SemQLValidation
+entity: entities.Address.Address
+label: City must not be null
+validationScope: NONE
+description: This validation ensures that the City field is not null for addresses.
+condition: City IS NOT NULL

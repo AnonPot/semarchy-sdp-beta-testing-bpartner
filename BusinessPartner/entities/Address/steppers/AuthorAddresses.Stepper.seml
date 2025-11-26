@@ -1,0 +1,32 @@
+_package: entities.Address.steppers
+_type: Stepper
+_name: AuthorAddresses
+entity: entities.Address.Address
+label: Addresses
+rootStep:
+  _type: CollectionStep
+  _name: AuthorFundLEsCollectionStep
+  label: FundLEs
+  canFinishSubLevel: true
+  childDeleteType: SOFT_DELETE
+  collectionView: entities.Address.collection_views.AddressCollectionView
+  customSortEnabled: false
+  defaultDisplayType: TABLE
+  displayGridAllowed: false
+  displayListAllowed: true
+  displayTableAllowed: true
+  enabledOnParentCreate: true
+  enabledOnParentEdit: true
+  formFieldsMode: AUTO
+  linear: false
+  useCustomCollectionLabel: false
+  userDefinedSortEnabled: false
+  childSteps:
+    - _type: FormStep
+      _name: AuthorAddressFormStep
+      label: Create Address
+      canFinishSubLevel: true
+      formFieldsMode: AUTO
+      enabledOnParentCreate: true
+      enabledOnParentEdit: true
+      enableMasterValuePicking: false

@@ -1,0 +1,62 @@
+_package: entities.Address
+_type: Entity
+_name: Address
+label: Address
+pluralLabel: Address
+entityType: BASIC
+physicalTableName: ADDRESS
+iconUrl: images://mdi/book.svg
+description: ""
+documentation: ""
+historizeGolden: false
+historizeMaster: false
+enableDelete: true
+dataEntryAllowed: true
+attributes:
+  - _type: EntityAttribute
+    _name: AddressID
+    label: Address ID
+    physicalName: ADDRESS_ID
+    dataType: LongInteger
+    precision: 38
+    mandatory: true
+    searchable: true
+  - _type: EntityAttribute
+    _name: City
+    label: City
+    physicalName: CITY
+    dataType: String
+    length: 128
+    searchable: true
+  - _type: EntityAttribute
+    _name: IsActive
+    label: Is Active
+    physicalName: IS_ACTIVE
+    dataType: Boolean
+    searchable: true
+  - _type: EntityAttribute
+    _name: Country
+    label: Country
+    physicalName: COUNTRY
+    dataType: list_of_values.Country
+    searchable: true
+    lovValidationScope: NONE
+  - _type: EntityAttribute
+    _name: CodeImportStatus
+    label: CodeImportStatus
+    physicalName: TXT_CODE_IMPORT_STATUS
+    dataType: String
+    length: 50
+    searchable: true
+  - _type: EntityAttribute
+    _name: Email
+    label: Email
+    physicalName: EMAIL
+    dataType: String
+    length: 256
+    searchable: true
+
+sourceIdGeneration:
+  mode: SEQUENCE
+  startWith: 1
+primaryKey: entities.Address.Address.AddressID

@@ -1,0 +1,70 @@
+_package: entities.Status.collection_views
+_type: CollectionView
+_name: StatusCollectionView
+entity: entities.Status.Status
+default: true
+displayCard: entities.Status.display_cards.StatusDisplayCard
+gridAllowed: false
+gridColumns: 4
+gridTextPosition: BOTTOM
+gridTileHeight: 1:1
+gridTileLines: 1
+listAllowed: true
+listItemLines: 1
+listShowDisplayCardAvatar: false
+listShowDivider: true
+tableAllowed: true
+tableDisplayCardColumnLabel: Status
+tableRowLines: 1
+tableShowDisplayCard: true
+tableColumns:
+  - _type: TableColumn
+    _name: StatusID
+    value: StatusID
+    useCustomLabel: false
+    visibleByDefault: true
+    columnAlign: LEFT
+    posInParent: 0
+    documentationInterpreter: LITERAL
+    componentName: semIdField
+    dataType: LONG_INTEGER
+  - _type: TableColumn
+    _name: Code
+    value: Code
+    useCustomLabel: false
+    visibleByDefault: true
+    columnAlign: LEFT
+    posInParent: 1
+    documentationInterpreter: LITERAL
+    componentName: semTextField
+    dataType: STRING
+  - _type: TableColumn
+    _name: Label
+    value: Label
+    useCustomLabel: false
+    visibleByDefault: true
+    columnAlign: LEFT
+    posInParent: 2
+    documentationInterpreter: LITERAL
+    componentName: semTextField
+    dataType: STRING
+  - _type: TableColumn
+    _name: Description
+    value: Description
+    useCustomLabel: false
+    visibleByDefault: true
+    columnAlign: LEFT
+    posInParent: 3
+    documentationInterpreter: LITERAL
+    componentName: semTextField
+    dataType: STRING
+  - _type: TableColumn
+    _name: IsActive
+    value: IsActive
+    useCustomLabel: false
+    visibleByDefault: true
+    columnAlign: LEFT
+    posInParent: 4
+    documentationInterpreter: LITERAL
+    componentName: semCheckboxField
+    dataType: BOOLEAN

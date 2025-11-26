@@ -1,0 +1,59 @@
+_package: entities.Status.forms
+_type: Form
+_name: StatusForm
+entity: entities.Status.Status
+default: true
+formTabs:
+  - _type: FormTab
+    _name: Status
+    label: Status
+    documentationInterpreter: LITERAL
+    visibleValue: "1"
+    visibleValueInterpreter: LITERAL
+    displayFormTabAs: LABEL
+    content:
+      - _type: FormField
+        _name: StatusID
+        value: StatusID
+        useCustomLabel: false
+        documentationInterpreter: LITERAL
+        visibleValue: "1"
+        visibleValueInterpreter: LITERAL
+        componentName: semIdField
+        dataType: LONG_INTEGER
+      - _type: FormField
+        _name: Code
+        value: Code
+        useCustomLabel: false
+        documentationInterpreter: LITERAL
+        visibleValue: "1"
+        visibleValueInterpreter: LITERAL
+        componentName: semTextField
+        dataType: STRING
+      - _type: FormField
+        _name: Label
+        value: Label
+        useCustomLabel: false
+        documentationInterpreter: LITERAL
+        visibleValue: "1"
+        visibleValueInterpreter: LITERAL
+        componentName: semTextField
+        dataType: STRING
+      - _type: FormField
+        _name: Description
+        value: Description
+        useCustomLabel: false
+        documentationInterpreter: LITERAL
+        visibleValue: "1"
+        visibleValueInterpreter: LITERAL
+        componentName: semTextField
+        dataType: STRING
+      - _type: FormField
+        _name: IsActive
+        value: IsActive
+        useCustomLabel: false
+        documentationInterpreter: LITERAL
+        visibleValue: "1"
+        visibleValueInterpreter: LITERAL
+        componentName: semCheckboxField
+        dataType: BOOLEAN

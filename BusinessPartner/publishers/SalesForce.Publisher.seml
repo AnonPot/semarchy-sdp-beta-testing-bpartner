@@ -1,0 +1,6 @@
+_package: publishers
+_name: SalesForce
+_type: Publisher
+code: "SalesForce"
+label: "SalesForce Publisher"
+active: true

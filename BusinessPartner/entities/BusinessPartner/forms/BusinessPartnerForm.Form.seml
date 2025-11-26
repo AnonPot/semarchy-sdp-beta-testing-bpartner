@@ -1,0 +1,23 @@
+_package: entities.BusinessPartner.forms
+_type: Form
+_name: BusinessPartnerForm
+entity: entities.BusinessPartner.BusinessPartner
+default: true
+formTabs:
+  - _type: FormTab
+    _name: BusinessPartner
+    label: Business Partner
+    documentationInterpreter: LITERAL
+    visibleValue: "1"
+    visibleValueInterpreter: LITERAL
+    displayFormTabAs: LABEL
+    content:
+      - _type: FormField
+        _name: BusinessPartnerID
+        value: BusinessPartnerID
+        useCustomLabel: false
+        documentationInterpreter: LITERAL
+        visibleValue: "1"
+        visibleValueInterpreter: LITERAL
+        componentName: semIdField
+        dataType: LONG_INTEGER

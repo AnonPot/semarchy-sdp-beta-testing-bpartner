@@ -1,0 +1,37 @@
+_package: entities.BusinessPartner.business_views
+_type: BusinessView
+_name: BusinessPartnerBusinessView
+label: Business Partner Business View
+entity: entities.BusinessPartner.BusinessPartner
+rootLabel: Business Partners
+rootPluralLabel: Business Partners
+displayRootNodeAs: ICON_LABEL
+rootBusinessViewEntity:
+  _type: BusinessViewEntity
+  _name: BusinessPartner
+  entity: entities.BusinessPartner.BusinessPartner
+  collection: entities.BusinessPartner.collection_views.BusinessPartnerCollectionView
+  form: entities.BusinessPartner.forms.BusinessPartnerForm
+  displayCard: entities.BusinessPartner.display_cards.BusinessPartnerDisplayCard
+  outlineVisible: false
+  displayRecordCount: ALWAYS
+  businessEntitySearchConfigs:
+    - _name: TextConfig
+      _type: BusinessEntitySearchTypeConfig
+      searchType: TEXT
+    - _name: FormConfig
+      _type: BusinessEntitySearchTypeConfig
+      searchType: BY_FORM
+    - _name: AdvancedConfig
+      _type: BusinessEntitySearchTypeConfig
+      searchType: ADVANCED
+    - _name: SemqlConfig
+      _type: BusinessEntitySearchTypeConfig
+      searchType: SEMQL
+  overrideDefaultSort: false
+  enableUserDefinedSort: true
+  listAllowed: true
+  tableAllowed: true
+  gridAllowed: true
+enableHierarchyView: false
+useHierarchyOnOpen: false

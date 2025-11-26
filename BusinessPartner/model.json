@@ -1,0 +1,1887 @@
+{
+    "qualifiedName": "BusinessPartner",
+    "label": "Business Partner",
+    "modelConfiguration": {
+        "type": "POSTGRESQL"
+    },
+    "retentionPolicy": {
+        "deletionsDuration": 0,
+        "deletionsType": "FOREVER",
+        "deletionsUnit": "DAY",
+        "historyDuration": 0,
+        "historyType": "FOREVER",
+        "historyUnit": "DAY",
+        "sourceDataDuration": 0,
+        "sourceDataType": "FOREVER",
+        "sourceDataUnit": "DAY",
+        "sourceErrorsDuration": 0,
+        "sourceErrorsType": "FOREVER",
+        "sourceErrorsUnit": "DAY"
+    },
+    "applications": [
+        {
+            "qualifiedName": "applications.DefaultApplication",
+            "activitiesSectionEnabled": true,
+            "applicationTitle": "Default Application",
+            "avatarImageUrl": "images://default-data-app-icon.svg",
+            "certificationQueueEnabled": true,
+            "coverImageUrl": "images://default/cover.png",
+            "dashboardEnabled": true,
+            "dashboardScope": "MODEL",
+            "defaultAction": "applications.DefaultApplication.Root",
+            "entitiesListEnabled": true,
+            "errorsNavigationEnabled": true,
+            "favIcon": "images://default/dm-favicon.svg",
+            "historyBrowsingEnabled": false,
+            "historyBrowsingRequiredRole": "",
+            "homeSectionEnabled": true,
+            "lineageEnabled": true,
+            "logoUrl": "images://default/semarchy-logo-navy.svg",
+            "visibility": "VISIBLE",
+            "label": "Default Application",
+            "sortStrategy": "POSITION",
+            "documentationConfig": {
+                "documentation": ""
+            },
+            "globalSearchConfig": {
+                "displaySearchForDropdown": true,
+                "sortBoViewsAlphabetically": true
+            },
+            "navigationConfig": {
+                "navigationGroups": [
+                    {
+                        "qualifiedName": "applications.DefaultApplication.RootFolder",
+                        "_type": "FolderNavigationGroup",
+                        "dividerVisible": false,
+                        "labelVisible": false,
+                        "position": 0,
+                        "underlyingFolder": "applications.DefaultApplication.Root"
+                    },
+                    {
+                        "qualifiedName": "applications.DefaultApplication.AddressFolder",
+                        "_type": "FolderNavigationGroup",
+                        "dividerVisible": true,
+                        "labelVisible": true,
+                        "position": 1,
+                        "underlyingFolder": "applications.DefaultApplication.Root.AddressFolder"
+                    }
+                ]
+            },
+            "abstractAppActions": [
+                {
+                    "qualifiedName": "applications.DefaultApplication.Root",
+                    "_type": "FolderAction",
+                    "useCustomLabel": true,
+                    "image": "images://mdi/folder.svg",
+                    "imageAlign": "MIDDLE_CENTER",
+                    "imageMode": "FIT",
+                    "label": "Root Folder"
+                },
+                {
+                    "qualifiedName": "applications.DefaultApplication.Root.GlobalSearch",
+                    "posInFolder": 0,
+                    "parentFolder": "applications.DefaultApplication.Root",
+                    "_type": "GlobalSearchAction",
+                    "useCustomLabel": false,
+                    "imageAlign": "MIDDLE_CENTER",
+                    "imageMode": "FIT"
+                },
+                {
+                    "qualifiedName": "applications.DefaultApplication.Root.MyTasks",
+                    "posInFolder": 1,
+                    "parentFolder": "applications.DefaultApplication.Root",
+                    "_type": "MyTasksAction",
+                    "useCustomLabel": false,
+                    "imageAlign": "MIDDLE_CENTER",
+                    "imageMode": "FIT",
+                    "badgeVisible": false
+                },
+                {
+                    "qualifiedName": "applications.DefaultApplication.Root.Entities",
+                    "posInFolder": 2,
+                    "parentFolder": "applications.DefaultApplication.Root",
+                    "_type": "BrowseEntitiesFolderAction",
+                    "useCustomLabel": false,
+                    "imageAlign": "MIDDLE_CENTER",
+                    "imageMode": "FIT",
+                    "lineageEnabled": true
+                },
+                {
+                    "qualifiedName": "applications.DefaultApplication.Root.AddressFolder",
+                    "posInFolder": 3,
+                    "parentFolder": "applications.DefaultApplication.Root",
+                    "_type": "FolderAction",
+                    "useCustomLabel": true,
+                    "image": "images://mdi/book.svg",
+                    "imageAlign": "MIDDLE_CENTER",
+                    "imageMode": "FIT",
+                    "label": "Address"
+                },
+                {
+                    "qualifiedName": "applications.DefaultApplication.Root.AddressFolder.Address",
+                    "posInFolder": 0,
+                    "parentFolder": "applications.DefaultApplication.Root.AddressFolder",
+                    "_type": "BrowseBusinessViewAction",
+                    "businessObjectView": "entities.Address.business_views.AddressBusinessView",
+                    "nbRecordsBadgeVisible": true,
+                    "useCustomLabel": true,
+                    "image": "images://mdi/book.svg",
+                    "imageAlign": "MIDDLE_CENTER",
+                    "imageMode": "FIT",
+                    "label": "Address"
+                },
+                {
+                    "qualifiedName": "applications.DefaultApplication.Root.AddressFolder.AddressHierarchical",
+                    "posInFolder": 1,
+                    "parentFolder": "applications.DefaultApplication.Root.AddressFolder",
+                    "_type": "BrowseBusinessViewAction",
+                    "businessObjectView": "entities.Address.business_views.AddressHierarchical",
+                    "nbRecordsBadgeVisible": true,
+                    "useCustomLabel": true,
+                    "image": "images://mdi/book.svg",
+                    "imageAlign": "MIDDLE_CENTER",
+                    "imageMode": "FIT",
+                    "label": "Address Hierarchical"
+                }
+            ]
+        }
+    ],
+    "complexTypes": [],
+    "sqlFunctions": [],
+    "databaseViews": [],
+    "enricherCaches": [],
+    "lovTypes": [
+        {
+            "qualifiedName": "list_of_values.Country",
+            "_type": "LOVType",
+            "description": "",
+            "label": "Country",
+            "validationLabel": "",
+            "length": 128,
+            "lovValues": [
+                {
+                    "description": "",
+                    "label": "Lebanon",
+                    "code": "LB"
+                },
+                {
+                    "description": "",
+                    "label": "France",
+                    "code": "FR"
+                },
+                {
+                    "description": "",
+                    "label": "United States of America",
+                    "code": "USA"
+                },
+                {
+                    "description": "",
+                    "label": "Cyprus",
+                    "code": "CY"
+                },
+                {
+                    "description": "",
+                    "label": "United Kingdom",
+                    "code": "UK"
+                }
+            ]
+        }
+    ],
+    "modelDiagrams": [
+        {
+            "qualifiedName": "model_diagrams.BusinessPartnerDiagram",
+            "attributeNameFormat": "LABEL",
+            "entityNameFormat": "LABEL",
+            "entityShapes": [
+                {
+                    "qualifiedName": "model_diagrams.BusinessPartnerDiagram.Address",
+                    "entity": "entities.Address.Address",
+                    "position": {
+                        "x": -107,
+                        "y": -131
+                    },
+                    "width": 600,
+                    "height": 500,
+                    "borderColor": "0,0,0",
+                    "fontTitleColor": "255,0,0"
+                },
+                {
+                    "qualifiedName": "model_diagrams.BusinessPartnerDiagram.BusinessPartner",
+                    "entity": "entities.BusinessPartner.BusinessPartner",
+                    "position": {
+                        "x": 632.447648769381,
+                        "y": -127.02447500661623
+                    },
+                    "width": 600,
+                    "height": 500,
+                    "borderColor": "0,0,0",
+                    "fontTitleColor": "255,0,0"
+                },
+                {
+                    "qualifiedName": "model_diagrams.BusinessPartnerDiagram.Status",
+                    "entity": "entities.Status.Status",
+                    "position": {
+                        "x": 192.59247639892232,
+                        "y": -742.1198197736032
+                    },
+                    "width": 600,
+                    "height": 500,
+                    "borderColor": "0,0,0",
+                    "fontTitleColor": "255,0,0"
+                }
+            ],
+            "inheritLinks": [],
+            "referenceLinks": [
+                {
+                    "fromEntityShape": "model_diagrams.BusinessPartnerDiagram.Address",
+                    "toEntityShape": "model_diagrams.BusinessPartnerDiagram.Status",
+                    "reference": "references.AddressStatus",
+                    "bendPoints": []
+                }
+            ],
+            "label": "Business Partner Diagram",
+            "referenceNameFormat": "LABEL",
+            "referenceRoleNameFormat": "LABEL",
+            "showAttributeDataType": true,
+            "showInheritedAttributes": true,
+            "showReferenceCardinality": true,
+            "showReferenceName": true,
+            "showReferenceRoles": true
+        }
+    ],
+    "modelEditionVariables": [],
+    "modelJobs": [],
+    "modelPrivGrants": [
+        {
+            "qualifiedName": "model_priv_grants.DataSteward",
+            "allowApiPublishingAsUser": false,
+            "allowDataQualityDocumentation": false,
+            "allowEnrichmentDocumentation": false,
+            "dataAdminRole": false,
+            "description": "Data Steward role with access to specific entities and actions.",
+            "label": "Data Steward",
+            "roleName": "DataSteward"
+        },
+        {
+            "qualifiedName": "model_priv_grants.semarchyAdmin",
+            "allowApiPublishingAsUser": true,
+            "allowDataQualityDocumentation": true,
+            "allowEnrichmentDocumentation": true,
+            "dataAdminRole": true,
+            "description": "Semarchy Admin role with full access to all entities and actions.",
+            "integrationWsRole": true,
+            "label": "semarchy Admin",
+            "roleName": "semarchyAdmin"
+        }
+    ],
+    "namedQueries": [],
+    "publishers": [
+        {
+            "qualifiedName": "publishers.ECC",
+            "active": true,
+            "code": "ECC",
+            "label": "ECC Publisher"
+        },
+        {
+            "qualifiedName": "publishers.SalesForce",
+            "active": true,
+            "code": "SalesForce",
+            "label": "SalesForce Publisher"
+        }
+    ],
+    "referenceRels": [
+        {
+            "qualifiedName": "references.AddressStatus",
+            "brokenValidationLabel": "Address Status is not valid",
+            "deletePropagation": "RESTRICT",
+            "fromEntity": "entities.Address.Address",
+            "fromRoleName": "address",
+            "mandatoryValidationLabel": "Address Status",
+            "oneToMany": false,
+            "physicalName": "ADDRESS_STATUS",
+            "splitDuplicatePropagation": "NONE",
+            "toEntity": "entities.Status.Status",
+            "toRoleName": "status",
+            "toRolePhysicalName": "STATUS",
+            "validationScope": "NONE",
+            "description": "Reference from Address to Status",
+            "fromRoleLabel": "Address",
+            "fromRolePluralLabel": "Addresses",
+            "label": "Address Status",
+            "toRoleLabel": "Status",
+            "foreignAttribute": {
+                "qualifiedName": "references.AddressStatus.Status",
+                "_type": "ForeignAttribute",
+                "physicalName": "STATUS_FK_ID",
+                "label": "Status ID",
+                "searchable": true
+            }
+        }
+    ],
+    "userDefinedTypes": [],
+    "legacyWorkflows": [],
+    "workflows": [],
+    "entities": [
+        {
+            "qualifiedName": "entities.Address.Address",
+            "dataEntryAllowed": true,
+            "historizeGolden": false,
+            "historizeMaster": false,
+            "description": "",
+            "documentation": "",
+            "enableDelete": true,
+            "entityType": "BASIC",
+            "iconUrl": "images://mdi/book.svg",
+            "label": "Address",
+            "physicalTableName": "ADDRESS",
+            "pluralLabel": "Address",
+            "pkAttributes": [
+                {
+                    "qualifiedName": "entities.Address.Address.AddressID",
+                    "_type": "PKAttribute",
+                    "abstractAtomicType": "LongInteger",
+                    "goldenAttribute": true,
+                    "i18ned": false,
+                    "mandatory": true,
+                    "multiValued": false,
+                    "physicalColName": "ADDRESS_ID",
+                    "valueSeparator": "",
+                    "idGenerationType": "SEQUENCE",
+                    "idSequenceStartsWith": 1,
+                    "label": "Address ID",
+                    "precision": 38,
+                    "searchable": true
+                }
+            ],
+            "atomicAttributes": [
+                {
+                    "qualifiedName": "entities.Address.Address.City",
+                    "_type": "AtomicAttribute",
+                    "abstractAtomicType": "String",
+                    "goldenAttribute": true,
+                    "i18ned": false,
+                    "lovValidationScope": "NONE",
+                    "mandatory": false,
+                    "mandatoryValidationLabel": "",
+                    "mandatoryValidationScope": "NONE",
+                    "multiValued": false,
+                    "physicalColName": "CITY",
+                    "valueSeparator": "",
+                    "label": "City",
+                    "length": 128,
+                    "searchable": true
+                },
+                {
+                    "qualifiedName": "entities.Address.Address.IsActive",
+                    "_type": "AtomicAttribute",
+                    "abstractAtomicType": "Boolean",
+                    "goldenAttribute": true,
+                    "i18ned": false,
+                    "lovValidationScope": "NONE",
+                    "mandatory": false,
+                    "mandatoryValidationLabel": "",
+                    "mandatoryValidationScope": "NONE",
+                    "multiValued": false,
+                    "physicalColName": "IS_ACTIVE",
+                    "valueSeparator": "",
+                    "label": "Is Active",
+                    "searchable": true
+                },
+                {
+                    "qualifiedName": "entities.Address.Address.Country",
+                    "_type": "AtomicAttribute",
+                    "abstractAtomicType": "list_of_values.Country",
+                    "goldenAttribute": true,
+                    "i18ned": false,
+                    "lovValidationScope": "NONE",
+                    "mandatory": false,
+                    "mandatoryValidationLabel": "",
+                    "mandatoryValidationScope": "NONE",
+                    "multiValued": false,
+                    "physicalColName": "COUNTRY",
+                    "valueSeparator": "",
+                    "label": "Country",
+                    "searchable": true
+                },
+                {
+                    "qualifiedName": "entities.Address.Address.CodeImportStatus",
+                    "_type": "AtomicAttribute",
+                    "abstractAtomicType": "String",
+                    "goldenAttribute": true,
+                    "i18ned": false,
+                    "lovValidationScope": "NONE",
+                    "mandatory": false,
+                    "mandatoryValidationLabel": "",
+                    "mandatoryValidationScope": "NONE",
+                    "multiValued": false,
+                    "physicalColName": "TXT_CODE_IMPORT_STATUS",
+                    "valueSeparator": "",
+                    "label": "CodeImportStatus",
+                    "length": 50,
+                    "searchable": true
+                },
+                {
+                    "qualifiedName": "entities.Address.Address.Email",
+                    "_type": "AtomicAttribute",
+                    "abstractAtomicType": "String",
+                    "goldenAttribute": true,
+                    "i18ned": false,
+                    "lovValidationScope": "NONE",
+                    "mandatory": false,
+                    "mandatoryValidationLabel": "",
+                    "mandatoryValidationScope": "NONE",
+                    "multiValued": false,
+                    "physicalColName": "EMAIL",
+                    "valueSeparator": "",
+                    "label": "Email",
+                    "length": 256,
+                    "searchable": true
+                }
+            ],
+            "complexAttributes": [],
+            "abstractRowCheckConstraints": [
+                {
+                    "qualifiedName": "entities.Address.validations.EmailValidator",
+                    "_type": "PluginValidator",
+                    "numberOfRetry": 3,
+                    "onErrorBehavior": "FAIL_JOB",
+                    "pluginId": "com.semarchy.engine.plugins.convergence.email",
+                    "threadPoolSize": 1,
+                    "validationLabel": "",
+                    "validationScope": "NONE",
+                    "label": "Email Validator",
+                    "pluginInputs": [
+                        {
+                            "_type": "PluginValidatorInput",
+                            "expression": "InputEmailAddress",
+                            "inputName": "Email"
+                        }
+                    ],
+                    "pluginParams": [
+                        {
+                            "_type": "PluginValidatorParam",
+                            "paramName": "AcceptedEmailDomains",
+                            "value": "VALID_DOMAINS"
+                        },
+                        {
+                            "_type": "PluginValidatorParam",
+                            "paramName": "OfflineMode",
+                            "value": "1"
+                        }
+                    ]
+                },
+                {
+                    "qualifiedName": "entities.Address.validations.CityNotNull",
+                    "_type": "CheckConstraint",
+                    "condition": "City IS NOT NULL",
+                    "validationLabel": "",
+                    "validationScope": "NONE",
+                    "description": "This validation ensures that the City field is not null for addresses.",
+                    "label": "City must not be null"
+                }
+            ],
+            "actionSets": [
+                {
+                    "qualifiedName": "entities.Address.action_sets.AddressActionSet",
+                    "defaultActionSet": true,
+                    "description": "",
+                    "label": "Address Action Set",
+                    "actions": [
+                        {
+                            "qualifiedName": "entities.Address.action_sets.AddressActionSet.CreateAddress",
+                            "_type": "CreateAction",
+                            "description": "",
+                            "label": "Create Address",
+                            "useCustomLabel": false,
+                            "waitDialogEnabled": false,
+                            "allowOtherPublishers": false,
+                            "createdRecordType": "GOLDEN",
+                            "createMultiple": false,
+                            "stepper": "entities.Address.steppers.AuthorAddresses"
+                        },
+                        {
+                            "qualifiedName": "entities.Address.action_sets.AddressActionSet.ImportAuthorAddresses",
+                            "_type": "ImportAction",
+                            "description": "",
+                            "label": "Import",
+                            "useCustomLabel": true,
+                            "waitDialogEnabled": false,
+                            "allowOtherPublishers": false,
+                            "importedRecordType": "GOLDEN",
+                            "importMode": "CREATE_AND_UPDATE",
+                            "stepper": "entities.Address.steppers.AuthorAddresses"
+                        }
+                    ]
+                }
+            ],
+            "businessObjectViews": [
+                {
+                    "qualifiedName": "entities.Address.business_views.AddressBusinessView",
+                    "displayRootNodeAs": "ICON_LABEL",
+                    "enableHierarchyView": false,
+                    "filter": "1 = 1",
+                    "rootBoViewEntity": "entities.Address.business_views.AddressBusinessView.Address",
+                    "rootDescription": "",
+                    "rootLabel": "Addresses",
+                    "rootPluralLabel": "Addresses",
+                    "useHierarchyOnOpen": false,
+                    "visible": true,
+                    "label": "Address Business View",
+                    "boViewEntities": [
+                        {
+                            "qualifiedName": "entities.Address.business_views.AddressBusinessView.Address",
+                            "collection": "entities.Address.collection_views.AddressCollectionView",
+                            "displayRecordCount": "ALWAYS",
+                            "enableUserDefinedSort": true,
+                            "entity": "entities.Address.Address",
+                            "form": "entities.Address.forms.AddressForm",
+                            "gridAllowed": true,
+                            "listAllowed": true,
+                            "outlineVisible": false,
+                            "overrideDefaultSort": false,
+                            "sortExpression": "",
+                            "tableAllowed": true,
+                            "actionSet": "entities.Address.action_sets.AddressActionSet",
+                            "businessEntitySearchConfigs": [
+                                {
+                                    "qualifiedName": "entities.Address.business_views.AddressBusinessView.Address.TextConfig",
+                                    "searchTypeConfig": {
+                                        "searchType": "TEXT"
+                                    }
+                                },
+                                {
+                                    "qualifiedName": "entities.Address.business_views.AddressBusinessView.Address.FormConfig",
+                                    "searchTypeConfig": {
+                                        "searchType": "BY_FORM"
+                                    }
+                                },
+                                {
+                                    "qualifiedName": "entities.Address.business_views.AddressBusinessView.Address.AdvancedConfig",
+                                    "searchTypeConfig": {
+                                        "searchType": "ADVANCED"
+                                    }
+                                },
+                                {
+                                    "qualifiedName": "entities.Address.business_views.AddressBusinessView.Address.SemqlConfig",
+                                    "searchTypeConfig": {
+                                        "searchType": "SEMQL"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "qualifiedName": "entities.Address.business_views.AddressHierarchical",
+                    "displayRootNodeAs": "ICON_LABEL",
+                    "enableHierarchyView": true,
+                    "filter": "1 = 1",
+                    "rootBoViewEntity": "entities.Address.business_views.AddressHierarchical.Address",
+                    "rootDescription": "",
+                    "rootLabel": "Addresses",
+                    "rootPluralLabel": "Addresses",
+                    "useHierarchyOnOpen": true,
+                    "visible": true,
+                    "label": "Address Business View",
+                    "boViewEntities": [
+                        {
+                            "qualifiedName": "entities.Address.business_views.AddressHierarchical.Address",
+                            "collection": "entities.Address.collection_views.AddressCollectionView",
+                            "displayRecordCount": "ALWAYS",
+                            "enableUserDefinedSort": true,
+                            "entity": "entities.Address.Address",
+                            "form": "entities.Address.forms.AddressForm",
+                            "gridAllowed": true,
+                            "listAllowed": true,
+                            "outlineVisible": false,
+                            "overrideDefaultSort": false,
+                            "sortExpression": "",
+                            "tableAllowed": true,
+                            "actionSet": "entities.Address.action_sets.AddressActionSet",
+                            "businessEntitySearchConfigs": [
+                                {
+                                    "qualifiedName": "entities.Address.business_views.AddressHierarchical.Address.TextConfig",
+                                    "searchTypeConfig": {
+                                        "searchType": "TEXT"
+                                    }
+                                },
+                                {
+                                    "qualifiedName": "entities.Address.business_views.AddressHierarchical.Address.FormConfig",
+                                    "searchTypeConfig": {
+                                        "searchType": "BY_FORM"
+                                    }
+                                },
+                                {
+                                    "qualifiedName": "entities.Address.business_views.AddressHierarchical.Address.AdvancedConfig",
+                                    "searchTypeConfig": {
+                                        "searchType": "ADVANCED"
+                                    }
+                                },
+                                {
+                                    "qualifiedName": "entities.Address.business_views.AddressHierarchical.Address.SemqlConfig",
+                                    "searchTypeConfig": {
+                                        "searchType": "SEMQL"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "collections": [
+                {
+                    "qualifiedName": "entities.Address.collection_views.AddressCollectionView",
+                    "default": true,
+                    "gridAllowed": false,
+                    "gridColumns": 4,
+                    "gridTextPosition": "BOTTOM",
+                    "gridTileHeight": "1:1",
+                    "gridTileLines": 1,
+                    "listAllowed": true,
+                    "listItemLines": 1,
+                    "listShowDisplayCardAvatar": false,
+                    "listShowDivider": true,
+                    "tableAllowed": true,
+                    "tableDisplayCardColumnLabel": "Address",
+                    "tableRowLines": 1,
+                    "tableShowDisplayCard": true,
+                    "displayCard": "entities.Address.display_cards.AddressDisplayCard",
+                    "tableColumns": [
+                        {
+                            "qualifiedName": "entities.Address.collection_views.AddressCollectionView.AddressID",
+                            "_type": "TableColumn",
+                            "columnAlign": "LEFT",
+                            "componentName": "semIdField",
+                            "documentationInterpreter": "LITERAL",
+                            "posInParent": 0,
+                            "useCustomLabel": false,
+                            "value": "AddressID",
+                            "visibleByDefault": true,
+                            "valueDataType": "LONG_INTEGER"
+                        },
+                        {
+                            "qualifiedName": "entities.Address.collection_views.AddressCollectionView.City",
+                            "_type": "TableColumn",
+                            "columnAlign": "LEFT",
+                            "componentName": "semIdField",
+                            "documentationInterpreter": "LITERAL",
+                            "posInParent": 0,
+                            "useCustomLabel": false,
+                            "value": "City",
+                            "visibleByDefault": true,
+                            "valueDataType": "STRING"
+                        },
+                        {
+                            "qualifiedName": "entities.Address.collection_views.AddressCollectionView.IsActive",
+                            "_type": "TableColumn",
+                            "columnAlign": "LEFT",
+                            "componentName": "semIdField",
+                            "documentationInterpreter": "LITERAL",
+                            "posInParent": 0,
+                            "useCustomLabel": false,
+                            "value": "IsActive",
+                            "visibleByDefault": true,
+                            "valueDataType": "BOOLEAN"
+                        },
+                        {
+                            "qualifiedName": "entities.Address.collection_views.AddressCollectionView.Country",
+                            "_type": "TableColumn",
+                            "columnAlign": "LEFT",
+                            "componentName": "semIdField",
+                            "documentationInterpreter": "LITERAL",
+                            "posInParent": 0,
+                            "useCustomLabel": false,
+                            "value": "Country",
+                            "visibleByDefault": true,
+                            "valueDataType": "STRING"
+                        },
+                        {
+                            "qualifiedName": "entities.Address.collection_views.AddressCollectionView.Email",
+                            "_type": "TableColumn",
+                            "columnAlign": "LEFT",
+                            "componentName": "semIdField",
+                            "documentationInterpreter": "LITERAL",
+                            "posInParent": 0,
+                            "useCustomLabel": true,
+                            "value": "Email",
+                            "visibleByDefault": true,
+                            "label": "Validated Email Address",
+                            "valueDataType": "STRING"
+                        }
+                    ]
+                }
+            ],
+            "displayCards": [
+                {
+                    "qualifiedName": "entities.Address.display_cards.AddressDisplayCard",
+                    "avatarImageValueInterpreter": "LITERAL",
+                    "default": true,
+                    "primaryImageFallbackValueInterpreter": "LITERAL",
+                    "primaryImageValueInterpreter": "LITERAL",
+                    "avatarImageAlign": "MIDDLE_CENTER",
+                    "avatarImageMode": "FIT",
+                    "avatarImageSourceType": "URL",
+                    "primaryImageAlign": "MIDDLE_CENTER",
+                    "primaryImageFallbackSourceType": "URL",
+                    "primaryImageMode": "FIT",
+                    "primaryImageSourceType": "URL",
+                    "primaryTextExpression": "SEM_NUMBER_TO_CHAR(AddressID)"
+                }
+            ],
+            "dupsManagers": [],
+            "enrichers": [
+                {
+                    "qualifiedName": "entities.Address.enrichers.SetIsActive",
+                    "_type": "SemQLEnricher",
+                    "condition": "IsActive IS NULL",
+                    "enricherExecutionScope": "NONE",
+                    "description": "Sets the IsActive field to true for new addresses",
+                    "label": "Set Is Active",
+                    "semQlEnricherExpressions": [
+                        {
+                            "attributeName": "IsActive",
+                            "expression": "1"
+                        }
+                    ]
+                },
+                {
+                    "qualifiedName": "entities.Address.enrichers.SetStatus",
+                    "_type": "PluginEnricher",
+                    "condition": "",
+                    "enricherExecutionScope": "NONE",
+                    "numberOfRetry": 3,
+                    "onErrorBehavior": "FAIL_JOB",
+                    "pluginId": "Pcom.semarchy.engine.plugins.convergence.lookup",
+                    "processingBatchSize": 100,
+                    "threadPoolSize": 1,
+                    "label": "Set Status",
+                    "pluginInputs": [
+                        {
+                            "_type": "PluginEnricherInput",
+                            "expression": "UPPER(CodeImportStatus)",
+                            "inputName": "SemarchyLookupEnricher.LookupValue"
+                        }
+                    ],
+                    "pluginOutputs": [
+                        {
+                            "attributeName": "Status",
+                            "outputName": "Output Value #1"
+                        }
+                    ],
+                    "pluginParams": [
+                        {
+                            "_type": "PluginEnricherParam",
+                            "paramName": "SemarchyLookupEnricher.LookupColumn",
+                            "value": "UPPER(TXT_CODE)"
+                        },
+                        {
+                            "_type": "PluginEnricherParam",
+                            "paramName": "SemarchyLookupEnricher.MappingTable",
+                            "value": "GD_STATUS"
+                        },
+                        {
+                            "_type": "PluginEnricherParam",
+                            "paramName": "SemarchyLookupEnricher.OutputColumns",
+                            "value": "STATUS_ID"
+                        }
+                    ]
+                }
+            ],
+            "forms": [
+                {
+                    "default": true,
+                    "qualifiedName": "entities.Address.forms.AddressForm",
+                    "formCharts": [],
+                    "formCollections": [],
+                    "formContainers": [
+                        {
+                            "qualifiedName": "entities.Address.forms.AddressForm.Address",
+                            "_type": "FormTab",
+                            "documentationInterpreter": "LITERAL",
+                            "posInParent": 0,
+                            "visibleValueInterpreter": "LITERAL",
+                            "displayFormTabAs": "LABEL",
+                            "label": "Address",
+                            "visibleValue": "1"
+                        },
+                        {
+                            "qualifiedName": "entities.Address.forms.AddressForm.Address.AddressDetails",
+                            "_type": "FormContainer",
+                            "layoutDirection": "COLUMN",
+                            "posInParent": 1,
+                            "parentFormContainer": "entities.Address.forms.AddressForm.Address",
+                            "relativeWidth": 10
+                        },
+                        {
+                            "qualifiedName": "entities.Address.forms.AddressForm.Address.AddressDetailsSecondPart",
+                            "_type": "FormContainer",
+                            "layoutDirection": "ROW",
+                            "posInParent": 2,
+                            "parentFormContainer": "entities.Address.forms.AddressForm.Address",
+                            "relativeWidth": 10
+                        },
+                        {
+                            "qualifiedName": "entities.Address.forms.AddressForm.Address.AddressDetailsSecondPart.LogisticsDetails",
+                            "_type": "FormContainer",
+                            "layoutDirection": "COLUMN",
+                            "posInParent": 0,
+                            "parentFormContainer": "entities.Address.forms.AddressForm.Address.AddressDetailsSecondPart",
+                            "relativeWidth": 10
+                        },
+                        {
+                            "qualifiedName": "entities.Address.forms.AddressForm.Address.AddressDetailsSecondPart.CountryDetails",
+                            "_type": "FormContainer",
+                            "layoutDirection": "COLUMN",
+                            "posInParent": 1,
+                            "parentFormContainer": "entities.Address.forms.AddressForm.Address.AddressDetailsSecondPart",
+                            "relativeWidth": 10
+                        },
+                        {
+                            "qualifiedName": "entities.Address.forms.AddressForm.Address.AddressActivityDetails",
+                            "_type": "FormContainer",
+                            "layoutDirection": "COLUMN",
+                            "posInParent": 3,
+                            "parentFormContainer": "entities.Address.forms.AddressForm.Address",
+                            "relativeWidth": 10
+                        }
+                    ],
+                    "formDashboards": [],
+                    "formFields": [
+                        {
+                            "qualifiedName": "entities.Address.forms.AddressForm.Address.AddressID",
+                            "_type": "FormField",
+                            "componentName": "semIdField",
+                            "documentationInterpreter": "LITERAL",
+                            "posInParent": 0,
+                            "useCustomLabel": false,
+                            "value": "AddressID",
+                            "parentFormContainer": "entities.Address.forms.AddressForm.Address",
+                            "valueDataType": "LONG_INTEGER",
+                            "visibleValue": "1",
+                            "visibleValueInterpreter": "LITERAL"
+                        },
+                        {
+                            "qualifiedName": "entities.Address.forms.AddressForm.Address.AddressDetails.AddressName",
+                            "_type": "FormField",
+                            "componentName": "semTextField",
+                            "documentationInterpreter": "LITERAL",
+                            "posInParent": 0,
+                            "useCustomLabel": false,
+                            "value": "AddressName",
+                            "parentFormContainer": "entities.Address.forms.AddressForm.Address.AddressDetails",
+                            "valueDataType": "STRING",
+                            "visibleValue": "1",
+                            "visibleValueInterpreter": "LITERAL"
+                        },
+                        {
+                            "qualifiedName": "entities.Address.forms.AddressForm.Address.AddressDetailsSecondPart.LogisticsDetails.City",
+                            "_type": "FormField",
+                            "componentName": "semTextField",
+                            "documentationInterpreter": "LITERAL",
+                            "posInParent": 0,
+                            "useCustomLabel": false,
+                            "value": "City",
+                            "parentFormContainer": "entities.Address.forms.AddressForm.Address.AddressDetailsSecondPart.LogisticsDetails",
+                            "valueDataType": "STRING",
+                            "visibleValue": "1",
+                            "visibleValueInterpreter": "LITERAL"
+                        },
+                        {
+                            "qualifiedName": "entities.Address.forms.AddressForm.Address.AddressDetailsSecondPart.LogisticsDetails.PostalCode",
+                            "_type": "FormField",
+                            "componentName": "semTextField",
+                            "documentationInterpreter": "LITERAL",
+                            "posInParent": 1,
+                            "useCustomLabel": false,
+                            "value": "PostalCode",
+                            "parentFormContainer": "entities.Address.forms.AddressForm.Address.AddressDetailsSecondPart.LogisticsDetails",
+                            "valueDataType": "STRING",
+                            "visibleValue": "1",
+                            "visibleValueInterpreter": "LITERAL"
+                        },
+                        {
+                            "qualifiedName": "entities.Address.forms.AddressForm.Address.AddressDetailsSecondPart.CountryDetails.Country",
+                            "_type": "FormField",
+                            "componentName": "semLovField",
+                            "documentationInterpreter": "LITERAL",
+                            "posInParent": 0,
+                            "useCustomLabel": false,
+                            "value": "Country",
+                            "parentFormContainer": "entities.Address.forms.AddressForm.Address.AddressDetailsSecondPart.CountryDetails",
+                            "valueDataType": "STRING",
+                            "visibleValue": "1",
+                            "visibleValueInterpreter": "LITERAL"
+                        },
+                        {
+                            "qualifiedName": "entities.Address.forms.AddressForm.Address.AddressActivityDetails.IsActive",
+                            "_type": "FormField",
+                            "componentName": "semTextField",
+                            "documentationInterpreter": "LITERAL",
+                            "posInParent": 0,
+                            "useCustomLabel": false,
+                            "value": "IsActive",
+                            "parentFormContainer": "entities.Address.forms.AddressForm.Address.AddressActivityDetails",
+                            "valueDataType": "STRING",
+                            "visibleValue": "1",
+                            "visibleValueInterpreter": "LITERAL"
+                        },
+                        {
+                            "qualifiedName": "entities.Address.forms.AddressForm.Address.AddressActivityDetails.CodeImportStatus",
+                            "_type": "FormField",
+                            "componentName": "semTextField",
+                            "documentationInterpreter": "LITERAL",
+                            "posInParent": 1,
+                            "useCustomLabel": false,
+                            "value": "CodeImportStatus",
+                            "parentFormContainer": "entities.Address.forms.AddressForm.Address.AddressActivityDetails",
+                            "valueDataType": "STRING",
+                            "visibleValue": "0",
+                            "visibleValueInterpreter": "LITERAL"
+                        },
+                        {
+                            "qualifiedName": "entities.Address.forms.AddressForm.Address.AddressActivityDetails.Status",
+                            "_type": "FormField",
+                            "componentName": "semTextField",
+                            "documentationInterpreter": "LITERAL",
+                            "posInParent": 2,
+                            "useCustomLabel": false,
+                            "value": "references.AddressStatus",
+                            "parentFormContainer": "entities.Address.forms.AddressForm.Address.AddressActivityDetails",
+                            "valueDataType": "STRING",
+                            "visibleValue": "CodeImportStatus IS NOT NULL",
+                            "visibleValueInterpreter": "SEMQL"
+                        }
+                    ]
+                }
+            ],
+            "searchForms": [],
+            "steppers": [
+                {
+                    "qualifiedName": "entities.Address.steppers.AuthorAddresses",
+                    "label": "Addresses",
+                    "rootCollectionStep": "entities.Address.steppers.AuthorAddresses.AuthorFundLEsCollectionStep",
+                    "steps": [
+                        {
+                            "qualifiedName": "entities.Address.steppers.AuthorAddresses.AuthorFundLEsCollectionStep",
+                            "_type": "CollectionStep",
+                            "canFinishSubLevel": true,
+                            "childDeleteType": "SOFT_DELETE",
+                            "childImportModeOnParentEdit": "CREATE_AND_UPDATE",
+                            "collectionView": "entities.Address.collection_views.AddressCollectionView",
+                            "createChildUsingManyToManyPicker": false,
+                            "customSortEnabled": false,
+                            "defaultDisplayType": "TABLE",
+                            "displayGridAllowed": false,
+                            "displayListAllowed": true,
+                            "displayTableAllowed": true,
+                            "enableChildCopyOnParentCreate": false,
+                            "enableChildCopyOnParentEdit": true,
+                            "enableChildCreationOnParentCreate": false,
+                            "enableChildCreationOnParentEdit": false,
+                            "enableChildDeleteOnParentEdit": false,
+                            "enableChildEditOnParentCreate": false,
+                            "enableChildEditOnParentEdit": false,
+                            "enableChildExport": false,
+                            "enableChildImportOnParentCreate": true,
+                            "enableChildImportOnParentEdit": false,
+                            "enableChildRemoveOnParentCreate": false,
+                            "enableChildRemoveOnParentEdit": false,
+                            "enabledOnParentCreate": true,
+                            "enabledOnParentEdit": true,
+                            "formFieldsMode": "AUTO",
+                            "linear": false,
+                            "manyToManyCustomSortEnabled": false,
+                            "manyToManyDefaultDisplayType": "GRID",
+                            "manyToManyDisplayGridAllowed": false,
+                            "manyToManyDisplayListAllowed": false,
+                            "manyToManyDisplayTableAllowed": false,
+                            "manyToManyUserDefinedSortEnabled": false,
+                            "skipToChildCreationOnParentCreate": false,
+                            "skipToChildEditingOnParentEdit": false,
+                            "useCustomCollectionLabel": false,
+                            "userDefinedSortEnabled": false,
+                            "label": "FundLEs"
+                        },
+                        {
+                            "qualifiedName": "entities.Address.steppers.AuthorAddresses.AuthorFundLEsCollectionStep.AuthorAddressFormStep",
+                            "_type": "FormStep",
+                            "canFinishSubLevel": true,
+                            "enabledOnParentCreate": true,
+                            "enabledOnParentEdit": true,
+                            "enableMasterValuePicking": false,
+                            "formFieldsMode": "AUTO",
+                            "label": "Create Address",
+                            "parentCollectionStep": "entities.Address.steppers.AuthorAddresses.AuthorFundLEsCollectionStep"
+                        }
+                    ]
+                }
+            ],
+            "survivorshipRules": [],
+            "uniqueKeys": []
+        },
+        {
+            "qualifiedName": "entities.BusinessPartner.BusinessPartner",
+            "dataEntryAllowed": true,
+            "historizeGolden": false,
+            "historizeMaster": false,
+            "description": "",
+            "documentation": "",
+            "enableDelete": true,
+            "entityType": "FUZZY_MATCHED",
+            "iconUrl": "images://mdi/book.svg",
+            "label": "Business Partner",
+            "physicalTableName": "BUSINESS_PARTNER",
+            "pluralLabel": "Business Partner",
+            "pkAttributes": [
+                {
+                    "qualifiedName": "entities.BusinessPartner.BusinessPartner.BusinessPartnerID",
+                    "_type": "PKAttribute",
+                    "abstractAtomicType": "LongInteger",
+                    "goldenAttribute": true,
+                    "i18ned": false,
+                    "mandatory": true,
+                    "multiValued": false,
+                    "physicalColName": "BUSINESS_PARTNER_ID",
+                    "valueSeparator": "",
+                    "fuzzyMatchedEntityGoldenIdGenerationType": "SEQUENCE",
+                    "fuzzyMatchedEntityGoldenIdSequenceStartsWith": 1,
+                    "idGenerationType": "SEQUENCE",
+                    "idSequenceStartsWith": 1,
+                    "label": "Business Partner ID",
+                    "precision": 38,
+                    "searchable": true
+                }
+            ],
+            "atomicAttributes": [],
+            "complexAttributes": [],
+            "matcher": {
+                "_type": "SemQLMatcher",
+                "autoConfirmGoldenThreshold": 99,
+                "autoConfirmSingletons": false,
+                "mergeThresholdMergingConfirmed": 0,
+                "mergeThresholdMergingConfirmedWithNewMasters": 0,
+                "mergeThresholdMergingConfirmedWithUnconfirmed": 0,
+                "mergeThresholdMergingUnconfirmed": 0,
+                "mergeThresholdMergingUnconfirmedWithNewMasters": 0,
+                "mergeThresholdNewGroup": 0,
+                "mergeThresholdRemergingPreviouslySplit": 100,
+                "useMultiIterationGrouping": true,
+                "useTransitiveMatchScore": true,
+                "description": "BusinessPartnerSemQLMatcher",
+                "matchRules": [
+                    {
+                        "qualifiedName": "entities.BusinessPartner.BusinessPartner.NewRule",
+                        "condition": "Record1.BusinessPartnerID  = Record2.BusinessPartnerID",
+                        "matchScore": 100,
+                        "label": "NewRuleLabel",
+                        "usingMatchOn": false
+                    }
+                ]
+            },
+            "abstractRowCheckConstraints": [],
+            "actionSets": [
+                {
+                    "qualifiedName": "entities.BusinessPartner.action_sets.BusinessPartnerActionSet",
+                    "defaultActionSet": true,
+                    "description": "",
+                    "label": "Business Partner Action Set",
+                    "actions": [
+                        {
+                            "qualifiedName": "entities.BusinessPartner.action_sets.BusinessPartnerActionSet.CreateAuthorBusinessPartners",
+                            "_type": "CreateAction",
+                            "description": "",
+                            "label": "Create",
+                            "useCustomLabel": true,
+                            "waitDialogEnabled": false,
+                            "allowOtherPublishers": true,
+                            "createdRecordType": "GOLDEN",
+                            "createMultiple": false,
+                            "stepper": "entities.BusinessPartner.steppers.AuthorBusinessPartners"
+                        },
+                        {
+                            "qualifiedName": "entities.BusinessPartner.action_sets.BusinessPartnerActionSet.ImportAuthorBusinessPartners",
+                            "_type": "ImportAction",
+                            "description": "",
+                            "label": "Import",
+                            "useCustomLabel": true,
+                            "waitDialogEnabled": false,
+                            "allowOtherPublishers": true,
+                            "importedRecordType": "GOLDEN",
+                            "importMode": "CREATE_AND_UPDATE",
+                            "stepper": "entities.BusinessPartner.steppers.AuthorBusinessPartners"
+                        }
+                    ]
+                }
+            ],
+            "businessObjectViews": [
+                {
+                    "qualifiedName": "entities.BusinessPartner.business_views.BusinessPartnerBusinessView",
+                    "displayRootNodeAs": "ICON_LABEL",
+                    "enableHierarchyView": false,
+                    "filter": "1 = 1",
+                    "rootBoViewEntity": "entities.BusinessPartner.business_views.BusinessPartnerBusinessView.BusinessPartner",
+                    "rootDescription": "",
+                    "rootLabel": "Business Partners",
+                    "rootPluralLabel": "Business Partners",
+                    "useHierarchyOnOpen": false,
+                    "visible": true,
+                    "label": "Business Partner Business View",
+                    "boViewEntities": [
+                        {
+                            "qualifiedName": "entities.BusinessPartner.business_views.BusinessPartnerBusinessView.BusinessPartner",
+                            "collection": "entities.BusinessPartner.collection_views.BusinessPartnerCollectionView",
+                            "displayRecordCount": "ALWAYS",
+                            "enableUserDefinedSort": true,
+                            "entity": "entities.BusinessPartner.BusinessPartner",
+                            "form": "entities.BusinessPartner.forms.BusinessPartnerForm",
+                            "gridAllowed": true,
+                            "listAllowed": true,
+                            "outlineVisible": false,
+                            "overrideDefaultSort": false,
+                            "sortExpression": "",
+                            "tableAllowed": true,
+                            "businessEntitySearchConfigs": [
+                                {
+                                    "qualifiedName": "entities.BusinessPartner.business_views.BusinessPartnerBusinessView.BusinessPartner.TextConfig",
+                                    "searchTypeConfig": {
+                                        "searchType": "TEXT"
+                                    }
+                                },
+                                {
+                                    "qualifiedName": "entities.BusinessPartner.business_views.BusinessPartnerBusinessView.BusinessPartner.FormConfig",
+                                    "searchTypeConfig": {
+                                        "searchType": "BY_FORM"
+                                    }
+                                },
+                                {
+                                    "qualifiedName": "entities.BusinessPartner.business_views.BusinessPartnerBusinessView.BusinessPartner.AdvancedConfig",
+                                    "searchTypeConfig": {
+                                        "searchType": "ADVANCED"
+                                    }
+                                },
+                                {
+                                    "qualifiedName": "entities.BusinessPartner.business_views.BusinessPartnerBusinessView.BusinessPartner.SemqlConfig",
+                                    "searchTypeConfig": {
+                                        "searchType": "SEMQL"
+                                    }
+                                }
+                            ],
+                            "displayCard": "entities.BusinessPartner.display_cards.BusinessPartnerDisplayCard"
+                        }
+                    ]
+                }
+            ],
+            "collections": [
+                {
+                    "qualifiedName": "entities.BusinessPartner.collection_views.BusinessPartnerCollectionView",
+                    "default": true,
+                    "gridAllowed": false,
+                    "gridColumns": 4,
+                    "gridTextPosition": "BOTTOM",
+                    "gridTileHeight": "1:1",
+                    "gridTileLines": 1,
+                    "listAllowed": true,
+                    "listItemLines": 1,
+                    "listShowDisplayCardAvatar": false,
+                    "listShowDivider": true,
+                    "tableAllowed": true,
+                    "tableDisplayCardColumnLabel": "Business Partner",
+                    "tableRowLines": 1,
+                    "tableShowDisplayCard": true,
+                    "displayCard": "entities.BusinessPartner.display_cards.BusinessPartnerDisplayCard",
+                    "tableColumns": [
+                        {
+                            "qualifiedName": "entities.BusinessPartner.collection_views.BusinessPartnerCollectionView.BusinessPartnerID",
+                            "_type": "TableColumn",
+                            "columnAlign": "LEFT",
+                            "componentName": "semIdField",
+                            "documentationInterpreter": "LITERAL",
+                            "posInParent": 0,
+                            "useCustomLabel": false,
+                            "value": "BusinessPartnerID",
+                            "visibleByDefault": true,
+                            "valueDataType": "LONG_INTEGER"
+                        }
+                    ]
+                }
+            ],
+            "displayCards": [
+                {
+                    "qualifiedName": "entities.BusinessPartner.display_cards.BusinessPartnerDisplayCard",
+                    "avatarImageValueInterpreter": "LITERAL",
+                    "default": true,
+                    "primaryImageFallbackValueInterpreter": "LITERAL",
+                    "primaryImageValueInterpreter": "LITERAL",
+                    "avatarImageAlign": "MIDDLE_CENTER",
+                    "avatarImageMode": "FIT",
+                    "avatarImageSourceType": "URL",
+                    "primaryImageAlign": "MIDDLE_CENTER",
+                    "primaryImageFallbackSourceType": "URL",
+                    "primaryImageMode": "FIT",
+                    "primaryImageSourceType": "URL",
+                    "primaryTextExpression": "SEM_TO_CHAR2(BusinessPartnerID)"
+                }
+            ],
+            "dupsManagers": [
+                {
+                    "qualifiedName": "entities.BusinessPartner.dups_managers.ManageDuplicatesOnBusinessPartner",
+                    "checkoutCustomSortEnabled": false,
+                    "checkoutDefaultDisplayType": "TABLE",
+                    "checkoutDisplayGridAllowed": false,
+                    "checkoutDisplayListAllowed": true,
+                    "checkoutDisplayTableAllowed": true,
+                    "checkoutUserDefinedSortEnabled": true,
+                    "collectionView": "entities.BusinessPartner.collection_views.BusinessPartnerCollectionView",
+                    "displayCard": "entities.BusinessPartner.display_cards.BusinessPartnerDisplayCard",
+                    "enableMasterValuePicking": true,
+                    "formTab": "entities.BusinessPartner.forms.BusinessPartnerForm.BusinessPartner",
+                    "label": "Manage Duplicates on Business Partner"
+                }
+            ],
+            "enrichers": [],
+            "forms": [
+                {
+                    "default": true,
+                    "qualifiedName": "entities.BusinessPartner.forms.BusinessPartnerForm",
+                    "formCharts": [],
+                    "formCollections": [],
+                    "formContainers": [
+                        {
+                            "qualifiedName": "entities.BusinessPartner.forms.BusinessPartnerForm.BusinessPartner",
+                            "_type": "FormTab",
+                            "documentationInterpreter": "LITERAL",
+                            "posInParent": 0,
+                            "visibleValueInterpreter": "LITERAL",
+                            "displayFormTabAs": "LABEL",
+                            "label": "Business Partner",
+                            "visibleValue": "1"
+                        }
+                    ],
+                    "formDashboards": [],
+                    "formFields": [
+                        {
+                            "qualifiedName": "entities.BusinessPartner.forms.BusinessPartnerForm.BusinessPartner.BusinessPartnerID",
+                            "_type": "FormField",
+                            "componentName": "semIdField",
+                            "documentationInterpreter": "LITERAL",
+                            "posInParent": 0,
+                            "useCustomLabel": false,
+                            "value": "BusinessPartnerID",
+                            "parentFormContainer": "entities.BusinessPartner.forms.BusinessPartnerForm.BusinessPartner",
+                            "valueDataType": "LONG_INTEGER",
+                            "visibleValue": "1",
+                            "visibleValueInterpreter": "LITERAL"
+                        }
+                    ]
+                }
+            ],
+            "searchForms": [],
+            "steppers": [
+                {
+                    "qualifiedName": "entities.BusinessPartner.steppers.AuthorBusinessPartners",
+                    "label": "Business Partners",
+                    "rootCollectionStep": "entities.BusinessPartner.steppers.AuthorBusinessPartners.AuthorBusinessPartnersCollectionStep",
+                    "steps": [
+                        {
+                            "qualifiedName": "entities.BusinessPartner.steppers.AuthorBusinessPartners.AuthorBusinessPartnersCollectionStep",
+                            "_type": "CollectionStep",
+                            "canFinishSubLevel": true,
+                            "childDeleteType": "SOFT_DELETE",
+                            "childImportModeOnParentEdit": "CREATE_AND_UPDATE",
+                            "collectionView": "entities.BusinessPartner.collection_views.BusinessPartnerCollectionView",
+                            "createChildUsingManyToManyPicker": false,
+                            "customSortEnabled": false,
+                            "defaultDisplayType": "TABLE",
+                            "displayGridAllowed": false,
+                            "displayListAllowed": true,
+                            "displayTableAllowed": true,
+                            "enableChildCopyOnParentCreate": false,
+                            "enableChildCopyOnParentEdit": true,
+                            "enableChildCreationOnParentCreate": false,
+                            "enableChildCreationOnParentEdit": false,
+                            "enableChildDeleteOnParentEdit": false,
+                            "enableChildEditOnParentCreate": false,
+                            "enableChildEditOnParentEdit": false,
+                            "enableChildExport": false,
+                            "enableChildImportOnParentCreate": true,
+                            "enableChildImportOnParentEdit": false,
+                            "enableChildRemoveOnParentCreate": false,
+                            "enableChildRemoveOnParentEdit": false,
+                            "enabledOnParentCreate": true,
+                            "enabledOnParentEdit": true,
+                            "formFieldsMode": "AUTO",
+                            "linear": false,
+                            "manyToManyCustomSortEnabled": false,
+                            "manyToManyDefaultDisplayType": "GRID",
+                            "manyToManyDisplayGridAllowed": false,
+                            "manyToManyDisplayListAllowed": false,
+                            "manyToManyDisplayTableAllowed": false,
+                            "manyToManyUserDefinedSortEnabled": false,
+                            "skipToChildCreationOnParentCreate": false,
+                            "skipToChildEditingOnParentEdit": false,
+                            "useCustomCollectionLabel": false,
+                            "userDefinedSortEnabled": false,
+                            "label": "Business Partners"
+                        },
+                        {
+                            "qualifiedName": "entities.BusinessPartner.steppers.AuthorBusinessPartners.AuthorBusinessPartnersCollectionStep.AuthorFundLEFormStep",
+                            "_type": "FormStep",
+                            "canFinishSubLevel": true,
+                            "enabledOnParentCreate": true,
+                            "enabledOnParentEdit": true,
+                            "enableMasterValuePicking": false,
+                            "formFieldsMode": "AUTO",
+                            "label": "Account",
+                            "parentCollectionStep": "entities.BusinessPartner.steppers.AuthorBusinessPartners.AuthorBusinessPartnersCollectionStep"
+                        }
+                    ]
+                }
+            ],
+            "survivorshipRules": [
+                {
+                    "qualifiedName": "entities.BusinessPartner.survivorship_rules.DefaultRule",
+                    "_type": "StandardSurvivorshipRule",
+                    "consolidationSkipNulls": false,
+                    "label": "Default Rule",
+                    "consolidationStrategy": "PREFERRED_PUBLISHER",
+                    "description": "",
+                    "documentation": "",
+                    "publisherRankings": [
+                        {
+                            "_type": "ConsoPublisherRanking",
+                            "publisher": "publishers.ECC",
+                            "rank": 0
+                        },
+                        {
+                            "_type": "ConsoPublisherRanking",
+                            "publisher": "publishers.SalesForce",
+                            "rank": 1
+                        }
+                    ],
+                    "defaultRule": true,
+                    "overrideStrategy": "UNTIL_CONSOLIDATED_VAL_CHANGE"
+                },
+                {
+                    "qualifiedName": "entities.BusinessPartner.survivorship_rules.IdSurvivorshipRule",
+                    "_type": "IdSurvivorshipRule",
+                    "consolidationSkipNulls": false,
+                    "label": "Id Survivorship Rule",
+                    "consolidationOrderByExpression": "",
+                    "consolidationStrategy": "CUSTOM_RANKING",
+                    "description": "",
+                    "documentation": ""
+                }
+            ],
+            "uniqueKeys": []
+        },
+        {
+            "qualifiedName": "entities.Status.Status",
+            "dataEntryAllowed": true,
+            "historizeGolden": false,
+            "historizeMaster": false,
+            "description": "",
+            "documentation": "",
+            "enableDelete": true,
+            "entityType": "BASIC",
+            "iconUrl": "images://mdi/book.svg",
+            "label": "Status",
+            "physicalTableName": "STATUS",
+            "pluralLabel": "Status",
+            "pkAttributes": [
+                {
+                    "qualifiedName": "entities.Status.Status.StatusID",
+                    "_type": "PKAttribute",
+                    "abstractAtomicType": "LongInteger",
+                    "goldenAttribute": true,
+                    "i18ned": false,
+                    "mandatory": true,
+                    "multiValued": false,
+                    "physicalColName": "STATUS_ID",
+                    "valueSeparator": "",
+                    "idGenerationType": "SEQUENCE",
+                    "idSequenceStartsWith": 1,
+                    "label": "Status ID",
+                    "precision": 38,
+                    "searchable": true
+                }
+            ],
+            "atomicAttributes": [
+                {
+                    "qualifiedName": "entities.Status.Status.Code",
+                    "_type": "AtomicAttribute",
+                    "abstractAtomicType": "String",
+                    "goldenAttribute": true,
+                    "i18ned": false,
+                    "lovValidationScope": "NONE",
+                    "mandatory": true,
+                    "mandatoryValidationLabel": "",
+                    "mandatoryValidationScope": "NONE",
+                    "multiValued": false,
+                    "physicalColName": "TXT_CODE",
+                    "valueSeparator": "",
+                    "label": "Code",
+                    "length": 100,
+                    "searchable": true
+                },
+                {
+                    "qualifiedName": "entities.Status.Status.Label",
+                    "_type": "AtomicAttribute",
+                    "abstractAtomicType": "String",
+                    "goldenAttribute": true,
+                    "i18ned": false,
+                    "lovValidationScope": "NONE",
+                    "mandatory": true,
+                    "mandatoryValidationLabel": "",
+                    "mandatoryValidationScope": "NONE",
+                    "multiValued": false,
+                    "physicalColName": "TXT_LABEL",
+                    "valueSeparator": "",
+                    "label": "Label",
+                    "length": 200,
+                    "searchable": true
+                },
+                {
+                    "qualifiedName": "entities.Status.Status.Description",
+                    "_type": "AtomicAttribute",
+                    "abstractAtomicType": "String",
+                    "goldenAttribute": true,
+                    "i18ned": false,
+                    "lovValidationScope": "NONE",
+                    "mandatory": true,
+                    "mandatoryValidationLabel": "",
+                    "mandatoryValidationScope": "NONE",
+                    "multiValued": false,
+                    "physicalColName": "TXT_DESCRIPTION",
+                    "valueSeparator": "",
+                    "label": "Description",
+                    "length": 256,
+                    "searchable": true
+                },
+                {
+                    "qualifiedName": "entities.Status.Status.IsActive",
+                    "_type": "AtomicAttribute",
+                    "abstractAtomicType": "Boolean",
+                    "goldenAttribute": true,
+                    "i18ned": false,
+                    "lovValidationScope": "NONE",
+                    "mandatory": false,
+                    "mandatoryValidationLabel": "",
+                    "mandatoryValidationScope": "NONE",
+                    "multiValued": false,
+                    "physicalColName": "BOOL_IS_ACTIVE",
+                    "valueSeparator": "",
+                    "label": "Is Active"
+                }
+            ],
+            "complexAttributes": [],
+            "abstractRowCheckConstraints": [],
+            "actionSets": [
+                {
+                    "qualifiedName": "entities.Status.action_sets.StatusActionSet",
+                    "defaultActionSet": true,
+                    "description": "",
+                    "label": "Status Action Set",
+                    "actions": [
+                        {
+                            "qualifiedName": "entities.Status.action_sets.StatusActionSet.CreateAuthorStatuses",
+                            "_type": "CreateAction",
+                            "description": "",
+                            "label": "Create",
+                            "useCustomLabel": true,
+                            "waitDialogEnabled": false,
+                            "allowOtherPublishers": true,
+                            "createdRecordType": "GOLDEN",
+                            "createMultiple": false,
+                            "stepper": "entities.Status.steppers.AuthorStatuses"
+                        },
+                        {
+                            "qualifiedName": "entities.Status.action_sets.StatusActionSet.EditAuthorStatuses",
+                            "_type": "EditAction",
+                            "description": "",
+                            "label": "Edit",
+                            "useCustomLabel": true,
+                            "waitDialogEnabled": false,
+                            "multipleSelectionAllowed": true,
+                            "availableForErrorData": false,
+                            "availableForGoldenData": true,
+                            "availableForMasterData": false,
+                            "stepper": "entities.Status.steppers.AuthorStatuses"
+                        },
+                        {
+                            "qualifiedName": "entities.Status.action_sets.StatusActionSet.MassUpdateAuthorStatuses",
+                            "_type": "MassUpdateAction",
+                            "description": "",
+                            "label": "Mass Update",
+                            "useCustomLabel": true,
+                            "waitDialogEnabled": false,
+                            "stepper": "entities.Status.steppers.AuthorStatuses",
+                            "availableForErrorData": false,
+                            "availableForGoldenData": true,
+                            "availableForMasterData": false
+                        },
+                        {
+                            "qualifiedName": "entities.Status.action_sets.StatusActionSet.Delete",
+                            "_type": "DeleteAction",
+                            "description": "",
+                            "label": "Delete",
+                            "useCustomLabel": true,
+                            "waitDialogEnabled": false,
+                            "deleteType": "HARD_DELETE",
+                            "multipleSelectionAllowed": true,
+                            "availableForGoldenData": true,
+                            "availableForMasterData": false
+                        },
+                        {
+                            "qualifiedName": "entities.Status.action_sets.StatusActionSet.Export",
+                            "_type": "ExportAction",
+                            "description": "",
+                            "label": "Export",
+                            "useCustomLabel": true,
+                            "waitDialogEnabled": false
+                        },
+                        {
+                            "qualifiedName": "entities.Status.action_sets.StatusActionSet.ImportAuthorStatuses",
+                            "_type": "ImportAction",
+                            "description": "",
+                            "label": "Import",
+                            "useCustomLabel": true,
+                            "waitDialogEnabled": false,
+                            "allowOtherPublishers": true,
+                            "importedRecordType": "GOLDEN",
+                            "importMode": "CREATE_AND_UPDATE",
+                            "stepper": "entities.Status.steppers.AuthorStatuses"
+                        },
+                        {
+                            "qualifiedName": "entities.Status.action_sets.StatusActionSet.BrowseGraph",
+                            "_type": "BrowseGraphAction",
+                            "description": "",
+                            "label": "Browse Graph",
+                            "useCustomLabel": true,
+                            "waitDialogEnabled": false
+                        },
+                        {
+                            "qualifiedName": "entities.Status.action_sets.StatusActionSet.CopyAuthorStatuses",
+                            "_type": "CopyAction",
+                            "description": "",
+                            "label": "Copy",
+                            "useCustomLabel": true,
+                            "waitDialogEnabled": false,
+                            "multipleSelectionAllowed": true,
+                            "stepper": "entities.Status.steppers.AuthorStatuses"
+                        }
+                    ]
+                }
+            ],
+            "businessObjectViews": [
+                {
+                    "qualifiedName": "entities.Status.business_views.StatusBusinessView",
+                    "displayRootNodeAs": "ICON_LABEL",
+                    "enableHierarchyView": false,
+                    "filter": "1 = 1",
+                    "rootBoViewEntity": "entities.Status.business_views.StatusBusinessView.Status",
+                    "rootDescription": "",
+                    "rootLabel": "Statuses",
+                    "rootPluralLabel": "Statuses",
+                    "useHierarchyOnOpen": false,
+                    "visible": true,
+                    "label": "Status Business View",
+                    "boViewEntities": [
+                        {
+                            "qualifiedName": "entities.Status.business_views.StatusBusinessView.Status",
+                            "collection": "entities.Status.collection_views.StatusCollectionView",
+                            "displayRecordCount": "ALWAYS",
+                            "enableUserDefinedSort": true,
+                            "entity": "entities.Status.Status",
+                            "form": "entities.Status.forms.StatusForm",
+                            "gridAllowed": true,
+                            "listAllowed": true,
+                            "outlineVisible": false,
+                            "overrideDefaultSort": false,
+                            "sortExpression": "",
+                            "tableAllowed": true,
+                            "businessEntitySearchConfigs": [
+                                {
+                                    "qualifiedName": "entities.Status.business_views.StatusBusinessView.Status.TextConfig",
+                                    "searchTypeConfig": {
+                                        "searchType": "TEXT"
+                                    }
+                                },
+                                {
+                                    "qualifiedName": "entities.Status.business_views.StatusBusinessView.Status.FormConfig",
+                                    "searchTypeConfig": {
+                                        "searchType": "BY_FORM"
+                                    }
+                                },
+                                {
+                                    "qualifiedName": "entities.Status.business_views.StatusBusinessView.Status.AdvancedConfig",
+                                    "searchTypeConfig": {
+                                        "searchType": "ADVANCED"
+                                    }
+                                },
+                                {
+                                    "qualifiedName": "entities.Status.business_views.StatusBusinessView.Status.SemqlConfig",
+                                    "searchTypeConfig": {
+                                        "searchType": "SEMQL"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "collections": [
+                {
+                    "qualifiedName": "entities.Status.collection_views.StatusCollectionView",
+                    "default": true,
+                    "gridAllowed": false,
+                    "gridColumns": 4,
+                    "gridTextPosition": "BOTTOM",
+                    "gridTileHeight": "1:1",
+                    "gridTileLines": 1,
+                    "listAllowed": true,
+                    "listItemLines": 1,
+                    "listShowDisplayCardAvatar": false,
+                    "listShowDivider": true,
+                    "tableAllowed": true,
+                    "tableDisplayCardColumnLabel": "Status",
+                    "tableRowLines": 1,
+                    "tableShowDisplayCard": true,
+                    "displayCard": "entities.Status.display_cards.StatusDisplayCard",
+                    "tableColumns": [
+                        {
+                            "qualifiedName": "entities.Status.collection_views.StatusCollectionView.StatusID",
+                            "_type": "TableColumn",
+                            "columnAlign": "LEFT",
+                            "componentName": "semIdField",
+                            "documentationInterpreter": "LITERAL",
+                            "posInParent": 0,
+                            "useCustomLabel": false,
+                            "value": "StatusID",
+                            "visibleByDefault": true,
+                            "valueDataType": "LONG_INTEGER"
+                        },
+                        {
+                            "qualifiedName": "entities.Status.collection_views.StatusCollectionView.Code",
+                            "_type": "TableColumn",
+                            "columnAlign": "LEFT",
+                            "componentName": "semTextField",
+                            "documentationInterpreter": "LITERAL",
+                            "posInParent": 1,
+                            "useCustomLabel": false,
+                            "value": "Code",
+                            "visibleByDefault": true,
+                            "valueDataType": "STRING"
+                        },
+                        {
+                            "qualifiedName": "entities.Status.collection_views.StatusCollectionView.Label",
+                            "_type": "TableColumn",
+                            "columnAlign": "LEFT",
+                            "componentName": "semTextField",
+                            "documentationInterpreter": "LITERAL",
+                            "posInParent": 2,
+                            "useCustomLabel": false,
+                            "value": "Label",
+                            "visibleByDefault": true,
+                            "valueDataType": "STRING"
+                        },
+                        {
+                            "qualifiedName": "entities.Status.collection_views.StatusCollectionView.Description",
+                            "_type": "TableColumn",
+                            "columnAlign": "LEFT",
+                            "componentName": "semTextField",
+                            "documentationInterpreter": "LITERAL",
+                            "posInParent": 3,
+                            "useCustomLabel": false,
+                            "value": "Description",
+                            "visibleByDefault": true,
+                            "valueDataType": "STRING"
+                        },
+                        {
+                            "qualifiedName": "entities.Status.collection_views.StatusCollectionView.IsActive",
+                            "_type": "TableColumn",
+                            "columnAlign": "LEFT",
+                            "componentName": "semCheckboxField",
+                            "documentationInterpreter": "LITERAL",
+                            "posInParent": 4,
+                            "useCustomLabel": false,
+                            "value": "IsActive",
+                            "visibleByDefault": true,
+                            "valueDataType": "BOOLEAN"
+                        }
+                    ]
+                }
+            ],
+            "displayCards": [
+                {
+                    "qualifiedName": "entities.Status.display_cards.StatusDisplayCard",
+                    "avatarImageValueInterpreter": "LITERAL",
+                    "default": true,
+                    "primaryImageFallbackValueInterpreter": "LITERAL",
+                    "primaryImageValueInterpreter": "LITERAL",
+                    "avatarImageAlign": "MIDDLE_CENTER",
+                    "avatarImageMode": "FIT",
+                    "avatarImageSourceType": "URL",
+                    "primaryImageAlign": "MIDDLE_CENTER",
+                    "primaryImageFallbackSourceType": "URL",
+                    "primaryImageMode": "FIT",
+                    "primaryImageSourceType": "URL",
+                    "primaryTextExpression": "SEM_NUMBER_TO_CHAR(StatusID)"
+                }
+            ],
+            "dupsManagers": [],
+            "enrichers": [],
+            "forms": [
+                {
+                    "default": true,
+                    "qualifiedName": "entities.Status.forms.StatusForm",
+                    "formCharts": [],
+                    "formCollections": [],
+                    "formContainers": [
+                        {
+                            "qualifiedName": "entities.Status.forms.StatusForm.Status",
+                            "_type": "FormTab",
+                            "documentationInterpreter": "LITERAL",
+                            "posInParent": 0,
+                            "visibleValueInterpreter": "LITERAL",
+                            "displayFormTabAs": "LABEL",
+                            "label": "Status",
+                            "visibleValue": "1"
+                        }
+                    ],
+                    "formDashboards": [],
+                    "formFields": [
+                        {
+                            "qualifiedName": "entities.Status.forms.StatusForm.Status.StatusID",
+                            "_type": "FormField",
+                            "componentName": "semIdField",
+                            "documentationInterpreter": "LITERAL",
+                            "posInParent": 0,
+                            "useCustomLabel": false,
+                            "value": "StatusID",
+                            "parentFormContainer": "entities.Status.forms.StatusForm.Status",
+                            "valueDataType": "LONG_INTEGER",
+                            "visibleValue": "1",
+                            "visibleValueInterpreter": "LITERAL"
+                        },
+                        {
+                            "qualifiedName": "entities.Status.forms.StatusForm.Status.Code",
+                            "_type": "FormField",
+                            "componentName": "semTextField",
+                            "documentationInterpreter": "LITERAL",
+                            "posInParent": 1,
+                            "useCustomLabel": false,
+                            "value": "Code",
+                            "parentFormContainer": "entities.Status.forms.StatusForm.Status",
+                            "valueDataType": "STRING",
+                            "visibleValue": "1",
+                            "visibleValueInterpreter": "LITERAL"
+                        },
+                        {
+                            "qualifiedName": "entities.Status.forms.StatusForm.Status.Label",
+                            "_type": "FormField",
+                            "componentName": "semTextField",
+                            "documentationInterpreter": "LITERAL",
+                            "posInParent": 2,
+                            "useCustomLabel": false,
+                            "value": "Label",
+                            "parentFormContainer": "entities.Status.forms.StatusForm.Status",
+                            "valueDataType": "STRING",
+                            "visibleValue": "1",
+                            "visibleValueInterpreter": "LITERAL"
+                        },
+                        {
+                            "qualifiedName": "entities.Status.forms.StatusForm.Status.Description",
+                            "_type": "FormField",
+                            "componentName": "semTextField",
+                            "documentationInterpreter": "LITERAL",
+                            "posInParent": 3,
+                            "useCustomLabel": false,
+                            "value": "Description",
+                            "parentFormContainer": "entities.Status.forms.StatusForm.Status",
+                            "valueDataType": "STRING",
+                            "visibleValue": "1",
+                            "visibleValueInterpreter": "LITERAL"
+                        },
+                        {
+                            "qualifiedName": "entities.Status.forms.StatusForm.Status.IsActive",
+                            "_type": "FormField",
+                            "componentName": "semCheckboxField",
+                            "documentationInterpreter": "LITERAL",
+                            "posInParent": 4,
+                            "useCustomLabel": false,
+                            "value": "IsActive",
+                            "parentFormContainer": "entities.Status.forms.StatusForm.Status",
+                            "valueDataType": "BOOLEAN",
+                            "visibleValue": "1",
+                            "visibleValueInterpreter": "LITERAL"
+                        }
+                    ]
+                }
+            ],
+            "searchForms": [],
+            "steppers": [
+                {
+                    "qualifiedName": "entities.Status.steppers.AuthorStatuses",
+                    "label": "Statuses",
+                    "rootCollectionStep": "entities.Status.steppers.AuthorStatuses.Statuses",
+                    "steps": [
+                        {
+                            "qualifiedName": "entities.Status.steppers.AuthorStatuses.Statuses",
+                            "_type": "CollectionStep",
+                            "canFinishSubLevel": true,
+                            "childDeleteType": "HARD_DELETE",
+                            "childImportModeOnParentEdit": "CREATE_AND_UPDATE",
+                            "collectionView": "entities.Status.collection_views.StatusCollectionView",
+                            "createChildUsingManyToManyPicker": false,
+                            "customSortEnabled": false,
+                            "defaultDisplayType": "TABLE",
+                            "displayGridAllowed": false,
+                            "displayListAllowed": true,
+                            "displayTableAllowed": true,
+                            "enableChildCopyOnParentCreate": false,
+                            "enableChildCopyOnParentEdit": true,
+                            "enableChildCreationOnParentCreate": false,
+                            "enableChildCreationOnParentEdit": false,
+                            "enableChildDeleteOnParentEdit": false,
+                            "enableChildEditOnParentCreate": false,
+                            "enableChildEditOnParentEdit": false,
+                            "enableChildExport": false,
+                            "enableChildImportOnParentCreate": true,
+                            "enableChildImportOnParentEdit": false,
+                            "enableChildRemoveOnParentCreate": false,
+                            "enableChildRemoveOnParentEdit": false,
+                            "enabledOnParentCreate": true,
+                            "enabledOnParentEdit": true,
+                            "formFieldsMode": "AUTO",
+                            "linear": false,
+                            "manyToManyCustomSortEnabled": false,
+                            "manyToManyDefaultDisplayType": "GRID",
+                            "manyToManyDisplayGridAllowed": false,
+                            "manyToManyDisplayListAllowed": false,
+                            "manyToManyDisplayTableAllowed": false,
+                            "manyToManyUserDefinedSortEnabled": false,
+                            "skipToChildCreationOnParentCreate": false,
+                            "skipToChildEditingOnParentEdit": false,
+                            "useCustomCollectionLabel": false,
+                            "userDefinedSortEnabled": true,
+                            "label": "Statuses"
+                        },
+                        {
+                            "qualifiedName": "entities.Status.steppers.AuthorStatuses.Statuses.Status",
+                            "_type": "FormStep",
+                            "canFinishSubLevel": true,
+                            "enabledOnParentCreate": true,
+                            "enabledOnParentEdit": true,
+                            "enableMasterValuePicking": false,
+                            "formFieldsMode": "AUTO",
+                            "label": "Status",
+                            "parentCollectionStep": "entities.Status.steppers.AuthorStatuses.Statuses"
+                        }
+                    ]
+                }
+            ],
+            "survivorshipRules": [],
+            "uniqueKeys": []
+        }
+    ]
+}

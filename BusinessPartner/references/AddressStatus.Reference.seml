@@ -1,0 +1,25 @@
+_package: references
+_name: AddressStatus
+description: Reference from Address to Status
+_type: Reference
+label: Address Status
+physicalName: ADDRESS_STATUS
+fromEntity: entities.Address.Address
+toEntity: entities.Status.Status
+fromRoleName: address
+fromRoleLabel: Address
+fromRolePluralLabel: Addresses
+toRoleName: status
+toRoleLabel: Status
+toRolePhysicalName: STATUS
+deletePropagation: RESTRICT
+validationScope: NONE
+mandatoryValidationLabel: Address Status
+brokenValidationLabel: Address Status is not valid
+foreignAttribute:
+  _type: ForeignAttribute
+  _name: Status
+  label: Status ID
+  physicalName: STATUS_FK_ID
+  searchable: true
+

@@ -1,0 +1,6 @@
+_package: publishers
+_name: ECC
+_type: Publisher
+code: "ECC"
+label: "ECC Publisher"
+active: true

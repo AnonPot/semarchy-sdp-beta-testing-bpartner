@@ -1,0 +1,15 @@
+_package: entities.BusinessPartner.dups_managers
+_type: DupsManager
+_name: ManageDuplicatesOnBusinessPartner
+label: Manage Duplicates on Business Partner
+entity: entities.BusinessPartner.BusinessPartner
+enableMasterValuePicking: true
+displayCard: entities.BusinessPartner.display_cards.BusinessPartnerDisplayCard
+formTab: entities.BusinessPartner.forms.BusinessPartnerForm.BusinessPartner
+collectionView: entities.BusinessPartner.collection_views.BusinessPartnerCollectionView
+checkoutCustomSortEnabled: false
+checkoutUserDefinedSortEnabled: true
+checkoutDefaultDisplayType: TABLE
+checkoutDisplayGridAllowed: false
+checkoutDisplayListAllowed: true
+checkoutDisplayTableAllowed: true

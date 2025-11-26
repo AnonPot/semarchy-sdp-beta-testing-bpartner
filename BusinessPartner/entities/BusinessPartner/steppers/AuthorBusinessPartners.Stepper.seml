@@ -1,0 +1,34 @@
+_package: entities.BusinessPartner.steppers
+_type: Stepper
+_name: AuthorBusinessPartners
+entity: entities.BusinessPartner.BusinessPartner
+label: Business Partners
+rootStep:
+  _type: CollectionStep
+  _name: AuthorBusinessPartnersCollectionStep
+  label: Business Partners
+  canFinishSubLevel: true
+  childDeleteType: SOFT_DELETE
+  collectionView: entities.BusinessPartner.collection_views.BusinessPartnerCollectionView
+  customSortEnabled: false
+  defaultDisplayType: TABLE
+  displayGridAllowed: false
+  displayListAllowed: true
+  displayTableAllowed: true
+  enabledOnParentCreate: true
+  enabledOnParentEdit: true
+  formFieldsMode: AUTO
+  linear: false
+  useCustomCollectionLabel: false
+  userDefinedSortEnabled: false
+  childSteps:
+    - _type: FormStep
+      _name: AuthorFundLEFormStep
+      label: Account
+      canFinishSubLevel: true
+      # formTab: entities.FundLE.forms.FundLEForm.FundLE
+      formFieldsMode: AUTO
+      enabledOnParentCreate: true
+      enabledOnParentEdit: true
+      enableMasterValuePicking: false
+  

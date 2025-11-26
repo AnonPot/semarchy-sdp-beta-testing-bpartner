@@ -1,0 +1,16 @@
+_package: entities.BusinessPartner.display_cards
+_type: DisplayCard
+_name: BusinessPartnerDisplayCard
+entity: entities.BusinessPartner.BusinessPartner
+default: true
+primaryTextExpression: SEM_TO_CHAR2(BusinessPartnerID)
+primaryImageValueInterpreter: LITERAL
+avatarImageSourceType: URL
+primaryImageAlign: MIDDLE_CENTER
+primaryImageMode: FIT
+primaryImageFallbackValueInterpreter: LITERAL
+primaryImageFallbackSourceType: URL
+avatarImageValueInterpreter: LITERAL
+primaryImageSourceType: URL
+avatarImageAlign: MIDDLE_CENTER
+avatarImageMode: FIT

@@ -1,0 +1,59 @@
+_package: entities.Status
+_type: Entity
+_name: Status
+label: Status
+pluralLabel: Status
+entityType: BASIC
+physicalTableName: STATUS
+iconUrl: images://mdi/book.svg
+description: ""
+documentation: ""
+historizeGolden: false
+historizeMaster: false
+enableDelete: true
+attributes:
+  - _type: EntityAttribute
+    _name: StatusID
+    label: Status ID
+    physicalName: STATUS_ID
+    dataType: LongInteger
+    precision: 38
+    mandatory: true
+    searchable: true
+  - _type: EntityAttribute
+    _name: Code
+    label: Code
+    physicalName: TXT_CODE
+    dataType: String
+    length: 100
+    mandatory: true
+    searchable: true
+    mandatoryValidationScope: NONE
+  - _type: EntityAttribute
+    _name: Label
+    label: Label
+    physicalName: TXT_LABEL
+    dataType: String
+    length: 200
+    mandatory: true
+    searchable: true
+    mandatoryValidationScope: NONE
+  - _type: EntityAttribute
+    _name: Description
+    label: Description
+    physicalName: TXT_DESCRIPTION
+    dataType: String
+    length: 256
+    mandatory: true
+    searchable: true
+    mandatoryValidationScope: NONE
+  - _type: EntityAttribute
+    _name: IsActive
+    label: Is Active
+    physicalName: BOOL_IS_ACTIVE
+    dataType: Boolean
+
+sourceIdGeneration:
+  mode: SEQUENCE
+  startWith: 1
+primaryKey: entities.Status.Status.StatusID

@@ -1,0 +1,25 @@
+_package: entities.Address.action_sets
+_type: ActionSet
+_name: AddressActionSet
+entity: entities.Address.Address
+label: Address Action Set
+defaultActionSet: true
+actions:
+  - _type: CreateAction
+    _name: CreateAddress
+    label: Create Address
+    useCustomLabel: false
+    stepper: entities.Address.steppers.AuthorAddresses
+    createdRecordType: GOLDEN
+    createMultiple: false
+    waitDialogEnabled: false
+    allowOtherPublishers: false
+  - _type: ImportAction
+    _name: ImportAuthorAddresses
+    label: Import
+    useCustomLabel: true
+    importMode: CREATE_AND_UPDATE
+    stepper: entities.Address.steppers.AuthorAddresses
+    importedRecordType: GOLDEN
+    waitDialogEnabled: false
+    allowOtherPublishers: false

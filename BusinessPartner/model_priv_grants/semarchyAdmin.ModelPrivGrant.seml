@@ -1,0 +1,38 @@
+_type: ModelPrivGrant
+_package: model_priv_grants
+_name: semarchyAdmin
+roleName: semarchyAdmin
+label: semarchy Admin
+dataAdminRole: true
+integrationWsRole: true
+allowApiPublishingAsUser: true
+allowDataQualityDocumentation: true
+allowEnrichmentDocumentation: true
+description: "Semarchy Admin role with full access to all entities and actions."
+
+# entityPrivGrants:
+#   - _type: EntityPrivGrant
+#     entity: entities.Address.Address
+#     _name: AddressEntityPrivGrant
+#     checkoutAllowed: true
+#     createAllowed: true
+#     deleteAllowed: true
+#     exportAllowed: true
+#     removeAllowed: true
+#   - _type: EntityPrivGrant
+#     entity: entities.Status.Status
+#     _name: StatusEntityPrivGrant
+#     checkoutAllowed: true
+#     createAllowed: true
+#     deleteAllowed: true
+#     exportAllowed: true
+#     removeAllowed: true
+#   - _type: EntityPrivGrant
+#     entity: entities.BusinessPartner.BusinessPartner
+#     _name: BusinessPartnerEntityPrivGrant
+#     checkoutAllowed: true
+#     createAllowed: true
+#     deleteAllowed: true
+#     exportAllowed: true
+#     removeAllowed: true
+  

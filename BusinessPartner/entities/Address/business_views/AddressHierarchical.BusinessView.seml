@@ -1,0 +1,37 @@
+_package: entities.Address.business_views
+_name: AddressHierarchical
+_type: BusinessView
+label: Address Business View
+entity: entities.Address.Address
+rootLabel: Addresses
+rootPluralLabel: Addresses
+displayRootNodeAs: ICON_LABEL
+rootBusinessViewEntity:
+  _type: BusinessViewEntity
+  _name: Address
+  entity: entities.Address.Address
+  actionSet: entities.Address.action_sets.AddressActionSet
+  collection: entities.Address.collection_views.AddressCollectionView
+  form: entities.Address.forms.AddressForm
+  outlineVisible: false
+  displayRecordCount: ALWAYS
+  businessEntitySearchConfigs:
+    - _name: TextConfig
+      _type: BusinessEntitySearchTypeConfig
+      searchType: TEXT
+    - _name: FormConfig
+      _type: BusinessEntitySearchTypeConfig
+      searchType: BY_FORM
+    - _name: AdvancedConfig
+      _type: BusinessEntitySearchTypeConfig
+      searchType: ADVANCED
+    - _name: SemqlConfig
+      _type: BusinessEntitySearchTypeConfig
+      searchType: SEMQL
+  overrideDefaultSort: false
+  enableUserDefinedSort: true
+  listAllowed: true
+  tableAllowed: true
+  gridAllowed: true
+enableHierarchyView: true
+useHierarchyOnOpen: true

@@ -1,0 +1,21 @@
+_package: entities.Address.validations
+_name: EmailValidator
+_type: PluginValidation
+entity: entities.Address.Address
+label: Email Validator
+numberOfRetry: 3
+onErrorBehavior: FAIL_JOB
+pluginId: com.semarchy.engine.plugins.convergence.email
+threadPoolSize: 1
+validationScope: NONE
+pluginParams:
+  - _type: PluginValidationParam
+    paramName: AcceptedEmailDomains
+    value: VALID_DOMAINS
+  - _type: PluginValidationParam
+    paramName: OfflineMode
+    value: '1'
+pluginInputs:
+  - _type: PluginValidationInput
+    expression: InputEmailAddress
+    inputName: Email

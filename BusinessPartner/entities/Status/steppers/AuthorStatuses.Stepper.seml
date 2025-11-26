@@ -1,0 +1,32 @@
+_package: entities.Status.steppers
+_type: Stepper
+_name: AuthorStatuses
+entity: entities.Status.Status
+label: Statuses
+rootStep:
+  _type: CollectionStep
+  _name: Statuses
+  label: Statuses
+  canFinishSubLevel: true
+  enabledOnParentCreate: true
+  enabledOnParentEdit: true
+  formFieldsMode: AUTO
+  linear: false
+  childDeleteType: HARD_DELETE
+  collectionView: entities.Status.collection_views.StatusCollectionView
+  defaultDisplayType: TABLE
+  customSortEnabled: false
+  userDefinedSortEnabled: true
+  displayGridAllowed: false
+  displayListAllowed: true
+  displayTableAllowed: true
+  useCustomCollectionLabel: false
+  childSteps:
+    - _type: FormStep
+      _name: Status
+      label: Status
+      canFinishSubLevel: true
+      enabledOnParentCreate: true
+      enabledOnParentEdit: true
+      formFieldsMode: AUTO
+      enableMasterValuePicking: false

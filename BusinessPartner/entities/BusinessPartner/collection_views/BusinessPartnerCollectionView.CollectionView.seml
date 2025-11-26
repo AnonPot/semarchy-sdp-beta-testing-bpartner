@@ -1,0 +1,30 @@
+_package: entities.BusinessPartner.collection_views
+_type: CollectionView
+_name: BusinessPartnerCollectionView
+entity: entities.BusinessPartner.BusinessPartner
+default: true
+displayCard: entities.BusinessPartner.display_cards.BusinessPartnerDisplayCard
+gridAllowed: false
+gridColumns: 4
+gridTextPosition: BOTTOM
+gridTileHeight: 1:1
+gridTileLines: 1
+listAllowed: true
+listItemLines: 1
+listShowDisplayCardAvatar: false
+listShowDivider: true
+tableAllowed: true
+tableDisplayCardColumnLabel: Business Partner
+tableRowLines: 1
+tableShowDisplayCard: true
+tableColumns:
+  - _type: TableColumn
+    _name: BusinessPartnerID
+    value: BusinessPartnerID
+    useCustomLabel: false
+    visibleByDefault: true
+    columnAlign: LEFT
+    posInParent: 0
+    documentationInterpreter: LITERAL
+    componentName: semIdField
+    dataType: LONG_INTEGER

@@ -1,0 +1,51 @@
+_package: model_diagrams
+_name: BusinessPartnerDiagram
+_type: ModelDiagram
+label: Business Partner Diagram
+entityShapes:
+  - _type: EntityShape
+    _name: Address
+    entity: entities.Address.Address
+    borderColor: "#000000"
+    fontTitleColor: "#FF0000"
+    height: 500
+    width: 600
+    position:
+      x: -107
+      y: -131
+  - _type: EntityShape
+    _name: BusinessPartner
+    entity: entities.BusinessPartner.BusinessPartner
+    borderColor: "#000000"
+    fontTitleColor: "#FF0000"
+    height: 500
+    width: 600
+    position:
+      x: 632.447648769381
+      y: -127.02447500661623
+  - _type: EntityShape
+    _name: Status
+    entity: entities.Status.Status
+    borderColor: "#000000"
+    fontTitleColor: "#FF0000"
+    height: 500
+    width: 600
+    position:
+      x: 192.59247639892232
+      y: -742.1198197736032
+showReferenceRoles: true
+attributeNameFormat: LABEL
+entityNameFormat: LABEL
+referenceNameFormat: LABEL
+referenceRoleNameFormat: LABEL
+showAttributeDataType: true
+showForeignAttribute: true
+inheritLinks: []
+referenceLinks:
+  - fromEntityShape: model_diagrams.BusinessPartnerDiagram.Address
+    toEntityShape: model_diagrams.BusinessPartnerDiagram.Status
+    reference: references.AddressStatus
+    bendPoints: []
+showInheritedAttributes: true
+showReferenceCardinality: true
+showReferenceName: true

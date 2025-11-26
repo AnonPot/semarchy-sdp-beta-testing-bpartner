@@ -1,0 +1,23 @@
+_package: list_of_values
+_type: LOVType
+_name: Country
+label: Country
+description: ""
+length: 128
+validationLabel: ""
+lovValues:
+  - code: LB
+    label: Lebanon
+    description: ""
+  - code: FR
+    label: France
+    description: ""
+  - code: USA
+    label: United States of America
+    description: ""
+  - code: CY
+    label: Cyprus
+    description: ""
+  - code: UK
+    label: United Kingdom
+    description: ""

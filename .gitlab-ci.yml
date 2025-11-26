@@ -1,0 +1,18 @@
+stages:
+  - build_deploy
+
+variables:
+  NODE_VERSION: "20"
+  INSTANCE_URL: "https://apgar.na.semarchy.net"
+  DM_API_KEY: "t2Qxw44.YL59d2ayuL0z1znWMk2Yt9JkOxMXtwvwkY8"
+  DATA_SOURCE: "datasource1"
+  DATA_LOCATION: "BusinessPartner"
+
+build_deploy:
+  stage: build_deploy
+  image: node:${NODE_VERSION}
+  script:
+    - npm install -g .ci/packages/semarchy-sem-design-*.tgz # tgz sem-design package need to be near the CICD file (here in .ci/packages/ folder)
+    - sem-design dm data-location deploy --data-source $DATA_SOURCE --data-location $DATA_LOCATION --instance-url ${INSTANCE_URL}/dm --api-key $DM_API_KEY --root-folder ./${DATA_LOCATION} # sem-design command to build and deploy your model related to your variables
+#tags:
+    #- linux 

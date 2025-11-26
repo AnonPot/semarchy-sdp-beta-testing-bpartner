@@ -1,0 +1,11 @@
+_package: entities.Address.enrichers
+_name: SetIsActive
+_type: SemQLEnricher
+label: Set Is Active
+entity: entities.Address.Address
+enricherExecutionScope: NONE
+description: Sets the IsActive field to true for new addresses
+condition: 'IsActive IS NULL'
+semQlEnricherExpressions:
+  - attributeName: IsActive
+    expression: '1'

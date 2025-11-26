@@ -1,0 +1,28 @@
+_package: entities.Address.enrichers
+_name: SetStatus
+_type: PluginEnricher
+label: Set Status
+entity: entities.Address.Address
+pluginId: Pcom.semarchy.engine.plugins.convergence.lookup
+pluginOutputs:
+  - attributeName: Status
+    outputName: "Output Value #1"
+pluginParams:
+  - _type: PluginEnricherParam
+    paramName: SemarchyLookupEnricher.LookupColumn
+    value: UPPER(TXT_CODE)
+  - _type: PluginEnricherParam
+    paramName: SemarchyLookupEnricher.MappingTable
+    value: GD_STATUS
+  - _type: PluginEnricherParam
+    paramName: SemarchyLookupEnricher.OutputColumns
+    value: STATUS_ID
+pluginInputs:
+  - _type: PluginEnricherInput
+    expression: UPPER(CodeImportStatus)
+    inputName: SemarchyLookupEnricher.LookupValue
+enricherExecutionScope: NONE
+onErrorBehavior: FAIL_JOB
+numberOfRetry: 3
+processingBatchSize: 100
+threadPoolSize: 1

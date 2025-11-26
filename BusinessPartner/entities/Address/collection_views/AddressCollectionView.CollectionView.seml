@@ -1,0 +1,71 @@
+_package: entities.Address.collection_views
+_type: CollectionView
+_name: AddressCollectionView
+entity: entities.Address.Address
+default: true
+displayCard: entities.Address.display_cards.AddressDisplayCard
+gridAllowed: false
+gridColumns: 4
+gridTextPosition: BOTTOM
+gridTileHeight: 1:1
+gridTileLines: 1
+listAllowed: true
+listItemLines: 1
+listShowDisplayCardAvatar: false
+listShowDivider: true
+tableAllowed: true
+tableDisplayCardColumnLabel: Address
+tableRowLines: 1
+tableShowDisplayCard: true
+tableColumns:
+  - _type: TableColumn
+    _name: AddressID
+    value: AddressID
+    useCustomLabel: false
+    visibleByDefault: true
+    columnAlign: LEFT
+    posInParent: 0
+    documentationInterpreter: LITERAL
+    componentName: semIdField
+    dataType: LONG_INTEGER
+  - _type: TableColumn
+    _name: City
+    value: City
+    useCustomLabel: false
+    visibleByDefault: true
+    columnAlign: LEFT
+    posInParent: 0
+    documentationInterpreter: LITERAL
+    componentName: semIdField
+    dataType: STRING
+  - _type: TableColumn
+    _name: IsActive
+    value: IsActive
+    useCustomLabel: false
+    visibleByDefault: true
+    columnAlign: LEFT
+    posInParent: 0
+    documentationInterpreter: LITERAL
+    componentName: semIdField
+    dataType: BOOLEAN
+  - _type: TableColumn
+    _name: Country
+    value: Country
+    useCustomLabel: false
+    visibleByDefault: true
+    columnAlign: LEFT
+    posInParent: 0
+    documentationInterpreter: LITERAL
+    componentName: semIdField
+    dataType: STRING
+  - _type: TableColumn
+    _name: Email
+    value: Email
+    useCustomLabel: true
+    label: Validated Email Address
+    visibleByDefault: true
+    columnAlign: LEFT
+    posInParent: 0
+    documentationInterpreter: LITERAL
+    componentName: semIdField
+    dataType: STRING

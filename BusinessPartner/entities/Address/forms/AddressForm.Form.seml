@@ -1,0 +1,111 @@
+_package: entities.Address.forms
+_type: Form
+_name: AddressForm
+entity: entities.Address.Address
+default: true
+formTabs:
+  - _type: FormTab
+    _name: Address
+    label: Address
+    documentationInterpreter: LITERAL
+    visibleValue: "1"
+    visibleValueInterpreter: LITERAL
+    displayFormTabAs: LABEL
+    content:
+      - _type: FormField
+        _name: AddressID
+        value: AddressID
+        useCustomLabel: false
+        documentationInterpreter: LITERAL
+        visibleValue: "1"
+        visibleValueInterpreter: LITERAL
+        componentName: semIdField
+        dataType: LONG_INTEGER
+      - _type: FormContainer
+        _name: AddressDetails
+        layoutDirection: COLUMN
+        relativeWidth: 10
+        content:
+          - _type: FormField
+            _name: AddressName
+            value: AddressName
+            useCustomLabel: false
+            documentationInterpreter: LITERAL
+            visibleValue: "1"
+            visibleValueInterpreter: LITERAL
+            componentName: semTextField
+            dataType: STRING
+      - _type: FormContainer
+        _name: AddressDetailsSecondPart
+        layoutDirection: ROW
+        relativeWidth: 10
+        content:
+          - _type: FormContainer
+            _name: LogisticsDetails
+            layoutDirection: COLUMN
+            relativeWidth: 10
+            content:
+              - _type: FormField
+                value: City
+                _name: City
+                useCustomLabel: false
+                documentationInterpreter: LITERAL
+                visibleValue: "1"
+                visibleValueInterpreter: LITERAL
+                componentName: semTextField
+                dataType: STRING
+              - _type: FormField
+                value: PostalCode
+                _name: PostalCode
+                useCustomLabel: false
+                documentationInterpreter: LITERAL
+                visibleValue: "1"
+                visibleValueInterpreter: LITERAL
+                componentName: semTextField
+                dataType: STRING
+          - _type: FormContainer
+            _name: CountryDetails
+            layoutDirection: COLUMN
+            relativeWidth: 10
+            content:
+              - _type: FormField
+                value: Country
+                _name: Country
+                useCustomLabel: false
+                documentationInterpreter: LITERAL
+                visibleValue: "1"
+                visibleValueInterpreter: LITERAL
+                componentName: semLovField
+                dataType: STRING
+      - _type: FormContainer
+        _name: AddressActivityDetails
+        layoutDirection: COLUMN
+        relativeWidth: 10
+        content:
+          - _type: FormField
+            _name: IsActive
+            value: IsActive
+            useCustomLabel: false
+            documentationInterpreter: LITERAL
+            visibleValue: "1"
+            visibleValueInterpreter: LITERAL
+            componentName: semTextField
+            dataType: STRING
+          - _type: FormField
+            _name: CodeImportStatus
+            value: CodeImportStatus
+            useCustomLabel: false
+            documentationInterpreter: LITERAL
+            visibleValue: "0"
+            visibleValueInterpreter: LITERAL
+            componentName: semTextField
+            dataType: STRING
+          - _type: FormField
+            _name: Status
+            value: references.AddressStatus
+            useCustomLabel: false
+            documentationInterpreter: LITERAL
+            visibleValue: "CodeImportStatus IS NOT NULL"
+            visibleValueInterpreter: SEMQL
+            componentName: semTextField
+            dataType: STRING

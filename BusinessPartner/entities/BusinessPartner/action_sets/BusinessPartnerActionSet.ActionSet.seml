@@ -1,0 +1,25 @@
+_package: entities.BusinessPartner.action_sets
+_type: ActionSet
+_name: BusinessPartnerActionSet
+entity: entities.BusinessPartner.BusinessPartner
+label: Business Partner Action Set
+defaultActionSet: true
+actions:
+  - _type: CreateAction
+    _name: CreateAuthorBusinessPartners
+    label: Create
+    useCustomLabel: true
+    stepper: entities.BusinessPartner.steppers.AuthorBusinessPartners
+    createMultiple: false
+    createdRecordType: GOLDEN
+    waitDialogEnabled: false
+    allowOtherPublishers: true
+  - _type: ImportAction
+    _name: ImportAuthorBusinessPartners
+    label: Import
+    useCustomLabel: true
+    importMode: CREATE_AND_UPDATE
+    stepper: entities.BusinessPartner.steppers.AuthorBusinessPartners
+    importedRecordType: GOLDEN
+    waitDialogEnabled: false
+    allowOtherPublishers: true
