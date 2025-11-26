@@ -29,8 +29,8 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-        cache-dependency-path: subdir/package-lock.json
+        # cache: 'npm'
+        # cache-dependency-path: subdir/package-lock.json
     - run: npm install -g .ci/packages/semarchy-sem-design-*.tgz # tgz sem-design package need to be near the CICD file (here in .ci/packages/ folder)
     - run: echo "Test" #sem-design dm data-location deploy --data-source $DATA_SOURCE --data-location $DATA_LOCATION --instance-url ${INSTANCE_URL}/dm --api-key $DM_API_KEY --root-folder ./${DATA_LOCATION} # sem-design command to build and deploy your model related to your variables
     - run: echo "Done"
