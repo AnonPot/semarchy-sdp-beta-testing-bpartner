@@ -3,9 +3,13 @@
 
 name: Semarchy SDP Deployer
 on:
-  push:
-    branches: [ "master" ]
+  # push:
+  #   branches: [ "master" ]
   workflow_dispatch:
+    inputs:
+      instance_url:
+        description: SDP Instance URL
+        required: true
 
 jobs:
   build:
@@ -29,6 +33,6 @@ jobs:
         # cache: 'npm'
         # cache-dependency-path: subdir/package-lock.json
     - run: npm install -g .ci/packages/semarchy-sem-design-*.tgz # tgz sem-design package need to be near the CICD file (here in .ci/packages/ folder)
-    # - run: echo "Data Source: $DATA_SOURCE, Data Location: $DATA_LOCATION, Instance URL: ${{ secrets.INSTANCE_URL }}, API KEY: ${{ secrets.DM_API_KEY }}"
-    - run: sem-design dm data-location deploy --data-source $DATA_SOURCE --data-location $DATA_LOCATION --instance-url ${{ secrets.INSTANCE_URL }}/dm --api-key ${{ secrets.DM_API_KEY }} --root-folder ./${DATA_LOCATION} # sem-design command to build and deploy your model related to your variables
+    #- run: sem-design dm data-location deploy --data-source $DATA_SOURCE --data-location $DATA_LOCATION --instance-url ${{ secrets.INSTANCE_URL }}/dm --api-key ${{ secrets.DM_API_KEY }} --root-folder ./${DATA_LOCATION} # sem-design command to build and deploy your model related to your variables
+    - run: sem-design dm data-location deploy --data-source $DATA_SOURCE --data-location $DATA_LOCATION --instance-url ${{ github.event.inputs.instance_url }}/dm --api-key ${{ secrets.DM_API_KEY }} --root-folder ./${DATA_LOCATION} # sem-design command to build and deploy your model related to your variables
     - run: echo "Deployment Done!"
